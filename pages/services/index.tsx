@@ -1,8 +1,11 @@
+import { Layout } from '@/components/layouts';
 import { NextPage } from 'next';
 
 const ServicesPage: NextPage = () => {
     return (
-        <div>ServicesPage</div>
+        <Layout title="DMGDEVS - Servicios">
+            <div>ServicesPage</div>
+        </Layout>
     )
 }
 

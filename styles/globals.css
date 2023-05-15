@@ -1,0 +1,60 @@
+nav {
+    position: relative;
+}
+
+nav .nav-link {
+    font-size: 14px;
+    color: #77789a;
+    text-decoration: none;
+    line-height: 35px;
+    text-transform: uppercase;
+    z-index: 1;
+    text-align: center;
+    padding: 0 17px;
+    transition: all 0.3s;
+}
+
+nav .animation {
+    position: absolute;
+    height: 2px;
+    bottom: -13px;
+    z-index: 0;
+    background: #daa655;
+    box-shadow: 0px -5px 15px #daa655;
+    transition: all .5s ease 0s;
+}
+
+
+nav .start-home,
+.nav-link:nth-child(1) {
+    width: 70px;
+    left: 5px;
+}
+
+nav .start-works,
+.nav-link:nth-child(2) {
+    width: 90px;
+    left: 88px;
+}
+
+nav .start-services,
+.nav-link:nth-child(3) {
+    width: 91px;
+    left: 198px;
+}
+
+nav .start-about,
+.nav-link:nth-child(4) {
+    width: 95px;
+    left: 309px;
+}
+
+nav .start-contact,
+.nav-link:nth-child(5) {
+    width: 90px;
+    left: 425px;
+}
+
+nav .active {
+    color: white;
+}
