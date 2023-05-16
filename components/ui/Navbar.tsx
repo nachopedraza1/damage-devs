@@ -1,10 +1,10 @@
-import { captureScroll } from '@/helpers';
-import { useNavbar } from '@/hooks';
-import { AppBar, Container, Grid, Slide, Toolbar, useScrollTrigger } from '@mui/material';
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
+
+import { useNavbar } from '@/hooks';
+
+import { AppBar, Container, Grid, Slide, Toolbar } from '@mui/material';
 
 
 interface Props {
