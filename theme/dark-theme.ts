@@ -14,6 +14,7 @@ export const darkTheme = createTheme({
         MuiAppBar: {
             styleOverrides: {
                 root: {
+                    background: "transparent",
                     boxShadow: "none",
                 }
             }
@@ -26,7 +27,7 @@ export const darkTheme = createTheme({
                     fontFamily: "Poppins",
                     border: "1px solid rgba(255, 255, 255, 0.3)",
                     background: "radial-gradient(107.5% 107.5% at 50% 215%, rgba(255, 255, 255, .24) 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, .04)",
-                    color:"white"
+                    color: "white"
                 }
             }
         },
