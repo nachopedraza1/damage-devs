@@ -2,6 +2,40 @@ import { createTheme } from '@mui/material';
 
 export const darkTheme = createTheme({
     palette: {
-        mode: 'dark'
-    }
+        mode: 'dark',
+        background: {
+            default: "#121112"
+        },
+        primary: {
+            main: "#08b8ef"
+        }
+    },
+    components: {
+        MuiAppBar: {
+            styleOverrides: {
+                root: {
+                    boxShadow: "none",
+                }
+            }
+        },
+        MuiButton: {
+            styleOverrides: {
+                contained: {
+                    borderRadius: 50,
+                    fontWeight: 600,
+                    fontFamily: "Poppins",
+                    border: "1px solid rgba(255, 255, 255, 0.3)",
+                    background: "radial-gradient(107.5% 107.5% at 50% 215%, rgba(255, 255, 255, .24) 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, .04)",
+                    color:"white"
+                }
+            }
+        },
+        MuiTypography: {
+            styleOverrides: {
+                root: {
+                    fontFamily: "Poppins"
+                }
+            }
+        }
+    },
 })

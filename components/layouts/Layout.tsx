@@ -1,7 +1,7 @@
 import { FC, ReactNode } from "react"
 import Head from "next/head"
 
-import { Container } from '@mui/material'
+import { Container } from '@mui/material';
 
 interface Props {
     title: string;

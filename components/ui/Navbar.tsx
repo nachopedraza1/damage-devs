@@ -37,10 +37,10 @@ export const Navbar = (props: Props) => {
     return (
         <>
             <Slide appear={false} direction="down" in={!trigger}>
-                <AppBar>
+                <AppBar sx={{ background: "transparent" }}>
                     <Toolbar disableGutters>
                         <Container maxWidth="lg">
-                            <Grid container alignItems="center" justifyContent="start" gap={2}>
+                            <Grid container alignItems="center" justifyContent="space-between" gap={2}>
                                 <Image src={`/images/logodmg.png`} alt='Damage devs' width={100} height={33} />
                                 <nav>
                                     {navLinks.map(({ id, path, text }) => (
