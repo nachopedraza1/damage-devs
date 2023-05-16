@@ -17,6 +17,7 @@ const services = [
 ]
 
 const HomePage: NextPage = () => {
+  
   return (
     <>
       <Layout title="DMGDEVS - Home">
@@ -76,8 +77,8 @@ const HomePage: NextPage = () => {
             <Grid container gap={1}>
               {["Diseño web responsive", "Tecnología de última generación", "Optimizadas para buscadores", "Diseños único, detallistas y profesionales, que de seguro mostrara la esencia de su marca"]
                 .map(text => (
-                  <Typography variant="h5" position="relative" fontWeight={600} pl={3}>
-                    <RadioButtonChecked sx={{ position: "absolute", top: 4, left: -9, color:"primary.main" }} />
+                  <Typography variant="h5" position="relative" fontWeight={600} pl={3} key={text}>
+                    <RadioButtonChecked sx={{ position: "absolute", top: 4, left: -9, color: "primary.main" }} />
                     {text}
                   </Typography>
                 ))

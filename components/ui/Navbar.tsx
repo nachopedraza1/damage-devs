@@ -1,8 +1,9 @@
+import { useScroll } from '@/hooks';
 import { AppBar, Container, Grid, Slide, Toolbar, useScrollTrigger } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 
 interface Props {
@@ -18,6 +19,9 @@ const navLinks = [
 ];
 
 export const Navbar = (props: Props) => {
+    const scroll = useScroll()
+
+    const blur = scroll > 300 ? "transparent" : "red";
 
     const { window } = props;
     const trigger = useScrollTrigger({
@@ -34,14 +38,15 @@ export const Navbar = (props: Props) => {
         setActiveTab(`start-${pathname.substring(1)}`)
     }, [pathname])
 
+
     return (
-        <>
+        <div>
             <Slide appear={false} direction="down" in={!trigger}>
-                <AppBar sx={{ background: "transparent" }}>
+                <AppBar sx={{ background: blur }}>
                     <Toolbar disableGutters>
                         <Container maxWidth="lg">
                             <Grid container alignItems="center" justifyContent="space-between" gap={2}>
-                                <Image src={`/images/logodmg.png`} alt='Damage devs' width={100} height={33} />
+                                <Image src={`/ images / logodmg.png`} alt='Damage devs' width={100} height={33} />
                                 <nav>
                                     {navLinks.map(({ id, path, text }) => (
                                         <Link
@@ -60,6 +65,6 @@ export const Navbar = (props: Props) => {
                 </AppBar>
             </Slide >
             <Toolbar />
-        </>
+        </div>
     )
 }
