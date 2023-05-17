@@ -325,9 +325,10 @@ nav .active {
 .stats-box {
     background: #1d1b1b;
     border-radius: 10px;
-    padding: 20px 30px;
+    padding: 40px 30px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.4s;
+    margin: 50px 0px;
     cursor: default;
 }
 
@@ -350,4 +351,9 @@ nav .active {
     text-align: center;
     font-size: 60px;
     color: #08b8ef;
+}
+
+.footer-container {
+    min-height: 350px;
+    width: 100%;
 }
