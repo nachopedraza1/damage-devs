@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Blob, CustomButton, MouseScroll } from "@/components/ui";
 import { ImportantDevices, ShoppingBasket, SettingsSuggest, Brush, Moving, Storage, RadioButtonChecked } from "@mui/icons-material";
 import { AcordionHome } from "@/components";
+import { StatsGroup } from "@/components/StatsGroup";
 
 
 const services = [
@@ -17,7 +18,9 @@ const services = [
 ]
 
 const HomePage: NextPage = () => {
+
   
+
   return (
     <>
       <Layout title="DMGDEVS - Home">
@@ -89,6 +92,9 @@ const HomePage: NextPage = () => {
             <Image src="/images/imagen-caracteristicas-web-de-emprebit.png" alt="DMG DEVS" width={450} height={450} />
           </Grid>
         </Grid>
+
+        <StatsGroup />
+
       </Layout >
     </>
   )

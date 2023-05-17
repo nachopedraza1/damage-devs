@@ -14,6 +14,7 @@ export const darkTheme = createTheme({
         MuiAppBar: {
             styleOverrides: {
                 root: {
+                    background: "transparent",
                     boxShadow: "none",
                 }
             }
@@ -26,7 +27,7 @@ export const darkTheme = createTheme({
                     fontFamily: "Poppins",
                     border: "1px solid rgba(255, 255, 255, 0.3)",
                     background: "radial-gradient(107.5% 107.5% at 50% 215%, rgba(255, 255, 255, .24) 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, .04)",
-                    color:"white"
+                    color: "white"
                 }
             }
         },
@@ -36,6 +37,20 @@ export const darkTheme = createTheme({
                     fontFamily: "Poppins"
                 }
             }
+        },
+        MuiAccordion: {
+            styleOverrides: {
+                root: {
+                    border: "1px solid rgba(255, 255, 255, 0.1)",
+                    borderRadius: 10,
+                    marginBottom: 10,
+                    background: "#1d1b1b",
+                    '&:before': {
+                        display: "none"
+                    }
+                }
+            },
+
         }
     },
 })

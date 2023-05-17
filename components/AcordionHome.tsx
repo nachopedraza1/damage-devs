@@ -18,8 +18,8 @@ export const AcordionHome: FC = () => {
     return (
         <div>
             <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-                <AccordionSummary expandIcon={<ExpandMoreIcon />} >
-                    <Typography>1 - Atención personalizada y exclusiva</Typography>
+                <AccordionSummary expandIcon={<ExpandMoreIcon color='primary' />} >
+                    <Typography> 1 - Atención personalizada y exclusiva</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
@@ -29,8 +29,8 @@ export const AcordionHome: FC = () => {
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-            <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-                <AccordionSummary  expandIcon={<ExpandMoreIcon />}>
+            <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')} >
+                <AccordionSummary expandIcon={<ExpandMoreIcon color='primary' />}>
                     <Typography>2 - Páginas web bien hechas y 100% profesionales</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
@@ -42,7 +42,7 @@ export const AcordionHome: FC = () => {
                 </AccordionDetails>
             </Accordion>
             <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
-                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <AccordionSummary expandIcon={<ExpandMoreIcon color='primary' />}>
                     <Typography>3 - Asesoramiento y soporte de primer nivel</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
@@ -53,6 +53,6 @@ export const AcordionHome: FC = () => {
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-        </div>
+        </div >
     )
 }

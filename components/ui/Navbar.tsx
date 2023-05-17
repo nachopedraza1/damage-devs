@@ -1,10 +1,11 @@
-import { useScroll } from '@/hooks';
-import { AppBar, Container, Grid, Slide, Toolbar, useScrollTrigger } from '@mui/material';
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { useState, useEffect, useCallback } from 'react';
 
+import { useNavbar } from '@/hooks/useNavbar';
+
+import { AppBar, Container, Grid, Slide, Toolbar } from '@mui/material';
+import { useInView } from 'react-intersection-observer';
 
 interface Props {
     window?: () => Window;
@@ -19,34 +20,19 @@ const navLinks = [
 ];
 
 export const Navbar = (props: Props) => {
-    const scroll = useScroll()
-
-    const blur = scroll > 300 ? "transparent" : "red";
-
-    const { window } = props;
-    const trigger = useScrollTrigger({
-        target: window ? window() : undefined,
-    });
 
     const { pathname } = useRouter();
 
-    const [activeTab, setActiveTab] = useState<string>("");
-
-    useEffect(() => {
-        if (pathname === "/") return setActiveTab("start-home");
-        if (pathname.includes("designs")) return setActiveTab("start-designs");
-        setActiveTab(`start-${pathname.substring(1)}`)
-    }, [pathname])
-
+    const { activeTab, navbarStyle, trigger } = useNavbar(props);
 
     return (
         <div>
             <Slide appear={false} direction="down" in={!trigger}>
-                <AppBar sx={{ background: blur }}>
-                    <Toolbar disableGutters>
+                <AppBar>
+                    <Toolbar disableGutters className={`navbar-blur ${navbarStyle}`}>
                         <Container maxWidth="lg">
                             <Grid container alignItems="center" justifyContent="space-between" gap={2}>
-                                <Image src={`/ images / logodmg.png`} alt='Damage devs' width={100} height={33} />
+                                <Image src={`/images/logodmg.png`} alt='Damage devs' width={100} height={33} />
                                 <nav>
                                     {navLinks.map(({ id, path, text }) => (
                                         <Link
