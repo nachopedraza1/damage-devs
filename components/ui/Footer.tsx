@@ -2,8 +2,10 @@ import { FC } from "react";
 import Image from "next/image"
 import Link from "next/link";
 
+import { ListItemMapped } from "../ListItemMapped";
+
 import { Brush, BuildCircle, Email, ImportantDevices, Language, LocalPhone, LocationOn, Moving, OfflineBolt, Paid, Recommend, SettingsSuggest, ShoppingBasket, Stars, Storage } from "@mui/icons-material"
-import { Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography, Link as MuiLink } from "@mui/material"
+import { Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography, Link as MuiLink, Divider } from "@mui/material"
 
 
 const services = [
@@ -44,54 +46,23 @@ export const Footer: FC = () => {
                     <Grid item xs={3}>
                         <Typography variant="h6"> Servicios </Typography>
                         <span className="mini-divider" />
-                        <List disablePadding>
-                            {services.map(({ icon, title, path }) => (
-                                <MuiLink component={Link} href={path} key={title}>
-                                    <ListItem disablePadding key={title}>
-                                        <ListItemIcon sx={{ minWidth: "40px" }}>
-                                            {icon}
-                                        </ListItemIcon>
-                                        <ListItemText primary={title} />
-                                    </ListItem>
-                                </MuiLink>
-                            ))}
-                        </List>
+                        <ListItemMapped arrayLinks={services} />
                     </Grid>
 
                     <Grid item xs={3}>
-                        <Typography variant="h6"> Navegación </Typography>
+                        <Typography variant="h6"> Planes </Typography>
                         <span className="mini-divider" />
-                        <List disablePadding>
-                            {plans.map(({ icon, title, path }) => (
-                                <MuiLink component={Link} href={path} key={title}>
-                                    <ListItem disablePadding >
-                                        <ListItemIcon sx={{ minWidth: "40px" }}>
-                                            {icon}
-                                        </ListItemIcon>
-                                        <ListItemText primary={title} />
-                                    </ListItem>
-                                </MuiLink>
-                            ))}
-                        </List>
+                        <ListItemMapped arrayLinks={plans} />
                     </Grid>
 
                     <Grid item xs={3}>
                         <Typography variant="h6"> Contacto </Typography>
                         <span className="mini-divider" />
-                        <List disablePadding>
-                            {contact.map(({ icon, title, path }) => (
-                                <MuiLink component={Link} href={path} key={title}>
-                                    <ListItem disablePadding key={title}>
-                                        <ListItemIcon sx={{ minWidth: "40px" }}>
-                                            {icon}
-                                        </ListItemIcon>
-                                        <ListItemText primary={title} />
-                                    </ListItem>
-                                </MuiLink>
-                            ))}
-                        </List>
+                        <ListItemMapped arrayLinks={contact} />
                     </Grid>
                 </Grid>
+
+                <Divider sx={{ mt: 5 }} />
             </Container>
         </footer>
     )

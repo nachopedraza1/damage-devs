@@ -1,12 +1,12 @@
-import { Layout } from "@/components/layouts";
 import { NextPage } from "next"
-import { Grid, Typography, Button, Divider, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import Image from "next/image";
+
+import { Layout } from "@/components/layouts";
+import { AcordionHome, StatsGroup } from "@/components";
 import { Blob, CustomButton, MouseScroll } from "@/components/ui";
+
+import { Grid, Typography, Button, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import { ImportantDevices, ShoppingBasket, SettingsSuggest, Brush, Moving, Storage, RadioButtonChecked } from "@mui/icons-material";
-import { AcordionHome } from "@/components";
-import { StatsGroup } from "@/components/StatsGroup";
-import { title } from "process";
 
 
 const services = [
@@ -19,8 +19,6 @@ const services = [
 ]
 
 const HomePage: NextPage = () => {
-
-
 
   return (
     <>
