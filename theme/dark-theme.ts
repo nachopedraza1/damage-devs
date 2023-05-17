@@ -51,6 +51,32 @@ export const darkTheme = createTheme({
                 }
             },
 
+        },
+        MuiContainer: {
+            styleOverrides: {
+                root: {
+                    position: "relative"
+                }
+            }
+        },
+        MuiSvgIcon: {
+            styleOverrides: {
+                root: {
+                    color: "#08b8ef"
+                }
+            }
+        },
+        MuiLink: {
+            styleOverrides: {
+                root: {
+                    textDecoration: "none",
+                    color: "inherit",
+                    transition: "all 0.2s",
+                    "&:hover": {
+                        color: "#08b8ef"
+                    }
+                }
+            }
         }
     },
 })

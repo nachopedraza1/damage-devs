@@ -292,7 +292,6 @@ nav .active {
     font-size: 90px;
     margin-bottom: 15px;
     transition: all 0.4s;
-    color: #08b8ef;
 }
 
 .services-box:hover {
@@ -323,10 +322,10 @@ nav .active {
 }
 
 .stats-box {
-    background: #1d1b1b;
+    /* background: #1d1b1b; */
     border-radius: 10px;
     padding: 40px 30px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* border: 1px solid rgba(255, 255, 255, 0.1); */
     transition: all 0.4s;
     margin: 50px 0px;
     cursor: default;
@@ -350,10 +349,35 @@ nav .active {
     width: 100%;
     text-align: center;
     font-size: 60px;
-    color: #08b8ef;
+}
+
+.acordion-item {
+    transition: all 0.4s;
+}
+
+.acordion-item:hover {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.4s;
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
 }
 
 .footer-container {
+    background: #0f0f0f;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background-image: url('/images/worl-map.footer.svg');
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 30px 0px;
     min-height: 350px;
-    width: 100%;
+}
+
+
+.footer-container .mini-divider {
+    background-color: #08b8ef;
+    margin: 15px 0px;
+    display: block;
+    width: 20%;
+    height: 2px;
 }

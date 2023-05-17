@@ -1,11 +1,12 @@
 import { Layout } from "@/components/layouts";
 import { NextPage } from "next"
-import { Grid, Typography, Button, Divider } from '@mui/material';
+import { Grid, Typography, Button, Divider, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import Image from "next/image";
 import { Blob, CustomButton, MouseScroll } from "@/components/ui";
 import { ImportantDevices, ShoppingBasket, SettingsSuggest, Brush, Moving, Storage, RadioButtonChecked } from "@mui/icons-material";
 import { AcordionHome } from "@/components";
 import { StatsGroup } from "@/components/StatsGroup";
+import { title } from "process";
 
 
 const services = [
@@ -19,15 +20,15 @@ const services = [
 
 const HomePage: NextPage = () => {
 
-  
+
 
   return (
     <>
       <Layout title="DMGDEVS - Home">
 
-        <Blob width="50%" top="-10px" left="7%" />
-        <Blob width="70%" top="600px" right={0} />
-        <Blob width="70%" top="1250px" left="7%" />
+        <Blob width="50%" top="-30px" left="2%" />
+        <Blob width="70%" top="500px" left="60%" />
+        <Blob width="60%" top="1250px" left="-3%" />
         <Blob width="60%" top="2050px" right={-150} />
 
         <Grid container justifyContent="space-between" alignItems="center" pt={4} mb={4}>
@@ -80,10 +81,12 @@ const HomePage: NextPage = () => {
             <Grid container gap={1}>
               {["Diseño web responsive", "Tecnología de última generación", "Optimizadas para buscadores", "Diseños único, detallistas y profesionales, que de seguro mostrara la esencia de su marca"]
                 .map(text => (
-                  <Typography variant="h5" position="relative" fontWeight={600} pl={3} key={text}>
-                    <RadioButtonChecked sx={{ position: "absolute", top: 4, left: -9, color: "primary.main" }} />
-                    {text}
-                  </Typography>
+                  <ListItem disablePadding key={text}>
+                    <ListItemIcon sx={{ minWidth: "40px" }}>
+                      <RadioButtonChecked />
+                    </ListItemIcon>
+                    <ListItemText primary={text} primaryTypographyProps={{ fontSize: "22px" }} />
+                  </ListItem>
                 ))
               }
             </Grid>
