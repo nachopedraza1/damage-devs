@@ -322,10 +322,10 @@ nav .active {
 }
 
 .stats-box {
-    /* background: #1d1b1b; */
+    background: #1d1b1b;
     border-radius: 10px;
     padding: 40px 30px;
-    /* border: 1px solid rgba(255, 255, 255, 0.1); */
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.4s;
     margin: 50px 0px;
     cursor: default;
@@ -369,8 +369,7 @@ nav .active {
     background-size: 35%;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 30px 0px;
-    min-height: 350px;
+    padding-top: 30px;
 }
 
 

@@ -28,6 +28,7 @@ const HomePage: NextPage = () => {
         <Blob width="70%" top="500px" left="60%" />
         <Blob width="60%" top="1250px" left="-3%" />
         <Blob width="60%" top="2050px" right={-150} />
+        <Blob width="60%" top="2550px" left="-3%" />
 
         <Grid container justifyContent="space-between" alignItems="center" pt={4} mb={4}>
           <Grid item xs={5} position="relative">

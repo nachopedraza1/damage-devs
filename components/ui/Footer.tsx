@@ -1,11 +1,10 @@
 import { FC } from "react";
 import Image from "next/image"
-import Link from "next/link";
 
 import { ListItemMapped } from "../ListItemMapped";
 
-import { Brush, BuildCircle, Email, ImportantDevices, Language, LocalPhone, LocationOn, Moving, OfflineBolt, Paid, Recommend, SettingsSuggest, ShoppingBasket, Stars, Storage } from "@mui/icons-material"
-import { Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography, Link as MuiLink, Divider } from "@mui/material"
+import { Container, Grid, Typography, Divider } from "@mui/material"
+import { Brush, BuildCircle, Email, Facebook, ImportantDevices, Instagram, Language, LocalPhone, LocationOn, Moving, OfflineBolt, Paid, Recommend, SettingsSuggest, ShoppingBasket, Stars, Storage, WhatsApp } from "@mui/icons-material"
 
 
 const services = [
@@ -39,8 +38,11 @@ export const Footer: FC = () => {
                 <Grid container justifyContent="space-between" alignItems="start" spacing={5} >
 
                     <Grid item xs={3}>
-                        <Image src={`/images/logodmg.png`} alt='Damage devs' width={100} height={33} style={{ marginBottom: 15 }} />
+                        <Image src={`/images/logodmg.png`} alt='Damage devs' width={100} height={33} />
+                        <span className="mini-divider" />
                         <Typography> Ponemos el foco en vos y en tu proyecto. Por eso trabajamos de forma conjunta para que tu negocio sea un éxito. </Typography>
+
+                        {/* socials */}
                     </Grid>
 
                     <Grid item xs={3}>
@@ -62,7 +64,8 @@ export const Footer: FC = () => {
                     </Grid>
                 </Grid>
 
-                <Divider sx={{ mt: 5 }} />
+                <Divider sx={{ mt: 3, mb: 1 }} />
+                <Typography textAlign="center" fontSize={13} color="#84859d" mb={1} > © Copyright Damage Devs 2020 - 2023. Todos los derechos reservados</Typography>
             </Container>
         </footer>
     )
