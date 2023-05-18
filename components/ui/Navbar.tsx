@@ -5,7 +5,6 @@ import { useRouter } from 'next/router';
 import { useNavbar } from '@/hooks/useNavbar';
 
 import { AppBar, Container, Grid, Slide, Toolbar } from '@mui/material';
-import { useInView } from 'react-intersection-observer';
 
 interface Props {
     window?: () => Window;
@@ -13,7 +12,7 @@ interface Props {
 
 const navLinks = [
     { id: 1, text: "Inicio", path: "/" },
-    { id: 2, text: "Trabajos", path: "/works" },
+    { id: 2, text: "Planes", path: "/plans" },
     { id: 3, text: "Servicios", path: "/services" },
     { id: 4, text: "Nosotros", path: "/about" },
     { id: 5, text: "Contacto", path: "/contact" },

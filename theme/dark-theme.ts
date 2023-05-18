@@ -50,7 +50,6 @@ export const darkTheme = createTheme({
                     }
                 }
             },
-
         },
         MuiContainer: {
             styleOverrides: {
@@ -75,6 +74,23 @@ export const darkTheme = createTheme({
                     "&:hover": {
                         color: "#08b8ef"
                     }
+                }
+            }
+        },
+        MuiPaper: {
+            styleOverrides: {
+                root: {
+                    background: "#1d1b1b",
+                    backdropFilter: "blur(10px)",
+                    borderRadius: "10px",
+                    border: "1px solid rgba(255, 255, 255, 0.1)",
+                }
+            }
+        },
+        MuiTableCell:{
+            styleOverrides:{
+                root:{
+                    fontFamily:"Poppins"
                 }
             }
         }
