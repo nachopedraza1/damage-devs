@@ -1,8 +1,15 @@
 import { FC } from "react";
 import Image from "next/image";
 
-import { RadioButtonChecked } from "@mui/icons-material";
-import { Grid, Typography, ListItem, ListItemIcon, ListItemText } from "@mui/material";
+import { ListItemMapped } from "./ListItemMapped";
+import { Grid, Typography } from "@mui/material";
+
+const characterist = [
+    { title: "Diseño web responsive" },
+    { title: "Tecnología de última generación" },
+    { title: "Optimizadas para buscadores" },
+    { title: "Diseños único, detallistas y profesionales, que de seguro mostrara la esencia de su marca" }
+];
 
 export const CharacteristicsWebs: FC = () => {
     return (
@@ -11,16 +18,7 @@ export const CharacteristicsWebs: FC = () => {
                 <Typography variant="h5" fontWeight={600} mb={2}> Características de nuestras páginas web </Typography>
                 <Typography mb={7}> Diseñamos páginas web intuitivas, funcionales y esteticamente profesionales. En el proceso de diseño, nos orientamos en la creación de estructuras de fácil navegación, claridad en el contenido y un diseño web eficaz e innovador que genere una experiencia de usuario perfecta. </Typography>
                 <Grid container gap={1}>
-                    {["Diseño web responsive", "Tecnología de última generación", "Optimizadas para buscadores", "Diseños único, detallistas y profesionales, que de seguro mostrara la esencia de su marca"]
-                        .map(text => (
-                            <ListItem disablePadding key={text}>
-                                <ListItemIcon sx={{ minWidth: "40px" }}>
-                                    <RadioButtonChecked />
-                                </ListItemIcon>
-                                <ListItemText primary={text} primaryTypographyProps={{ fontSize: "22px" }} />
-                            </ListItem>
-                        ))
-                    }
+                    <ListItemMapped arrayLinks={characterist} fontSize="22px" disableLink />
                 </Grid>
             </Grid>
             <Grid item xs={5} textAlign="center">

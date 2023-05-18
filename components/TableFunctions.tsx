@@ -1,5 +1,5 @@
 import { Check, Close } from "@mui/icons-material";
-import { TableContainer, Paper, Table, TableHead, TableRow, TableCell, TableBody, Grid, Typography } from "@mui/material"
+import { TableContainer, Paper, Table, TableHead, TableRow, TableCell, TableBody, Grid, Typography, styled } from "@mui/material"
 
 function createData(
     name: string,
@@ -12,7 +12,7 @@ function createData(
 }
 
 const checked = <Check />
-const noCheck = <Close />
+const noCheck = <Close sx={{color:"red"}} />
 
 const rows = [
     createData('Domino Gratuito.', checked, checked, checked),
@@ -34,6 +34,13 @@ const rows = [
     createData('Modificaciones', noCheck, checked, checked),
 ];
 
+const CustomPaper = styled(Paper)((props) => ({
+    background: "#1d1b1b",
+    backdropFilter: "blur(10px)",
+    borderRadius: "10px",
+    border: "1px solid rgba(255, 255, 255, 0.1)",
+}))
+
 export const TableFunctions = () => {
     return (
         <Grid container>
@@ -43,7 +50,7 @@ export const TableFunctions = () => {
                 <span className='mini-divider'></span>
             </Grid>
 
-            <TableContainer component={Paper} >
+            <TableContainer component={CustomPaper} >
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                     <TableHead>
                         <TableRow>

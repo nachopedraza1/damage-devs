@@ -77,22 +77,21 @@ export const darkTheme = createTheme({
                 }
             }
         },
-        MuiPaper: {
+        MuiTableCell: {
             styleOverrides: {
                 root: {
-                    background: "#1d1b1b",
-                    backdropFilter: "blur(10px)",
-                    borderRadius: "10px",
-                    border: "1px solid rgba(255, 255, 255, 0.1)",
+                    fontFamily: "Poppins"
                 }
             }
         },
-        MuiTableCell:{
-            styleOverrides:{
-                root:{
-                    fontFamily:"Poppins"
+        MuiTab: {
+            styleOverrides: {
+                root: {
+                    fontWeight: 600,
+                    fontFamily: "Poppins",
+                    fontSize: 16,
                 }
             }
-        }
+        },
     },
 })

@@ -3,6 +3,7 @@ export * from './StatsGroup';
 export * from './FaqAnswers';
 export * from './AcordionHome';
 export * from './PlansSection';
+export * from './ServicesTabs';
 export * from './TableFunctions';
 export * from './ListItemMapped';
 export * from './CharacteristicsWebs';

@@ -2,7 +2,7 @@ import { FC, ReactNode } from "react"
 import Head from "next/head"
 
 import { Container } from '@mui/material';
-import { Blob } from "../ui";
+import { Blob } from "@/components/ui";
 
 interface Props {
     title: string;
@@ -11,7 +11,7 @@ interface Props {
 
 export const Layout: FC<Props> = ({ children, title }) => {
     return (
-        <>
+        <div style={{ overflow: "hidden" }}>
             <Head>
                 <title> {title} </title>
             </Head>
@@ -24,6 +24,6 @@ export const Layout: FC<Props> = ({ children, title }) => {
                 <Blob width="60%" top="2550px" left="-3%" />
                 {children}
             </Container >
-        </>
+        </div>
     )
 }

@@ -3,8 +3,9 @@ import Image from "next/image"
 
 import { ListItemMapped } from "../ListItemMapped";
 
-import { Container, Grid, Typography, Divider, Link, Tooltip } from "@mui/material"
-import { Brush, BuildCircle, Email, Facebook, ImportantDevices, Instagram, Language, LocalPhone, LocationOn, Moving, OfflineBolt, Recommend, SettingsSuggest, ShoppingBasket, Stars, Storage, WhatsApp } from "@mui/icons-material"
+import { Container, Grid, Typography, Divider } from "@mui/material"
+import { Brush, BuildCircle, Email, ImportantDevices, Language, LocalPhone, LocationOn, Moving, OfflineBolt, Recommend, SettingsSuggest, ShoppingBasket, Stars, Storage } from "@mui/icons-material"
+import { SocialButtons } from "./SocialButtons";
 
 
 const services = [
@@ -40,30 +41,7 @@ export const Footer: FC = () => {
                         <Image src={`/images/logodmg.png`} alt='Damage devs' width={100} height={33} />
                         <span className="mini-divider" />
                         <Typography> Ponemos el foco en vos y en tu proyecto. Por eso trabajamos de forma conjunta para que tu negocio sea un éxito. </Typography>
-
-                        <Grid container margin="10px 0px" gap={2}>
-                            <Grid item>
-                                <Tooltip title="Facebook" arrow>
-                                    <Link href="/" target="_blank">
-                                        <Facebook sx={{ color: "#4267B2", fontSize: 35 }} />
-                                    </Link>
-                                </Tooltip>
-                            </Grid>
-                            <Grid item>
-                                <Tooltip title="Instagram" arrow>
-                                    <Link href="/" target="_blank">
-                                        <Instagram sx={{ color: "#E1306C", fontSize: 35 }} />
-                                    </Link>
-                                </Tooltip>
-                            </Grid>
-                            <Grid item>
-                                <Tooltip title="WhatsApp" arrow>
-                                    <Link href="/" target="_blank">
-                                        <WhatsApp sx={{ color: "#25D366", fontSize: 35 }} />
-                                    </Link>
-                                </Tooltip>
-                            </Grid>
-                        </Grid>
+                        <SocialButtons />
                     </Grid>
 
                     <Grid item xs={3}>

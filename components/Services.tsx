@@ -14,8 +14,9 @@ const services = [
 export const Services: FC = () => {
     return (
         <Grid container justifyContent="space-between" gap={4}>
-            <Grid item xs={12} mb={3}>
-                <Typography variant="h4" fontWeight={600} textAlign="center"> Nuestros servicios </Typography>
+            <Grid item xs={12} display="flex" direction="column" alignItems="center">
+                <Typography variant="h4" fontWeight={600}> Nuestros servicios </Typography>
+                <span className='mini-divider'></span>
             </Grid>
 
             {services.map(({ title, text, icon, path }) => (
