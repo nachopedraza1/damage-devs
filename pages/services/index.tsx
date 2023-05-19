@@ -1,7 +1,7 @@
 import { NextPage } from 'next';
 
 import { Layout } from '@/components/layouts';
-import { FaqAnswers, ServicesTabs } from '@/components';
+import { ServicesTabs } from '@/components';
 
 import { Grid, Typography } from '@mui/material';
 
@@ -16,8 +16,6 @@ const ServicesPage: NextPage = () => {
             </Grid>
 
             <ServicesTabs />
-
-            <FaqAnswers />
         </Layout>
     )
 }

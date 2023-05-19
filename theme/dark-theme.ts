@@ -107,5 +107,12 @@ export const darkTheme = createTheme({
                 }
             }
         },
+        MuiBreadcrumbs:{
+            styleOverrides:{
+                root:{
+                    marginBottom: 3
+                }
+            }
+        }
     },
 })

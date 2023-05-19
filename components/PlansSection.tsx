@@ -88,7 +88,9 @@ export const PlansSection: FC = () => {
                     </List >
                     <Divider />
                     <Box textAlign="center" mt={2}>
-                        <CustomButton text='CONTRATAR' />
+                        <Link href="/plans/ecommerce">
+                            <CustomButton text='CONTRATAR' />
+                        </Link>
                     </Box>
                 </Grid>
 
@@ -108,7 +110,9 @@ export const PlansSection: FC = () => {
                     </List >
                     <Divider />
                     <Box textAlign="center" mt={2}>
-                        <CustomButton text='CONTRATAR' />
+                        <Link href="/plans/autogest">
+                            <CustomButton text='CONTRATAR' />
+                        </Link>
                     </Box>
                 </Grid>
             </Grid>

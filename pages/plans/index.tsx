@@ -1,6 +1,6 @@
 import { NextPage } from 'next';
 
-import { PlansSection, TableFunctions } from '@/components';
+import { FaqAnswers, PlansSection, TableFunctions } from '@/components';
 import { Layout } from '@/components/layouts';
 
 import { Grid, Typography, Button, } from '@mui/material';
@@ -22,6 +22,8 @@ const PlansPage: NextPage = () => {
                 <span className='mini-divider'></span>
                 <Button variant='contained' endIcon={<WhatsApp />}> Contactar </Button>
             </Grid>
+
+            <FaqAnswers />
 
         </Layout >
     )

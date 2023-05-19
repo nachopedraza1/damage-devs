@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { ListItemMapped } from "./ListItemMapped";
 
-import { Accordion, AccordionSummary, Typography, AccordionDetails, Grid, Link as MuiLink } from "@mui/material";
+import { Accordion, AccordionSummary, Typography, AccordionDetails, Grid, Link as MuiLink, Box } from "@mui/material";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export const FaqAnswers: FC = () => {
@@ -16,10 +16,8 @@ export const FaqAnswers: FC = () => {
 
 
     return (
-        <div>
-
-            <Grid container justifyContent="center" alignItems="center" direction="column" mt={5} mb={5}>
-                <Typography variant='h6' > Mas Información </Typography>
+        <Box mb={5}>
+            <Grid container justifyContent="center" alignItems="center" direction="column" mt={5} mb={2}>
                 <Typography variant="subtitle1"> Preguntas Frecuentes</Typography>
                 <span className='mini-divider'></span>
             </Grid>
@@ -100,6 +98,6 @@ export const FaqAnswers: FC = () => {
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-        </div >
+        </Box >
     )
 }
