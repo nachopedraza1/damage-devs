@@ -24,6 +24,16 @@ export const Navbar = (props: Props) => {
 
     const { activeTab, navbarStyle, trigger } = useNavbar(props);
 
+    const isActiveClass = (path: string) => {
+        if (pathname === path) {
+            return "active nav-link";
+        } else if (pathname.includes(`${path}/`)) {
+            return "active nav-link";
+        } else {
+            return "nav-link";
+        }
+    }
+
     return (
         <div>
             <Slide appear={false} direction="down" in={!trigger}>
@@ -37,7 +47,7 @@ export const Navbar = (props: Props) => {
                                         <Link
                                             href={path}
                                             key={id}
-                                            className={pathname === path ? "active nav-link" : "nav-link"}
+                                            className={isActiveClass(path)}
                                         >
                                             {text}
                                         </Link>

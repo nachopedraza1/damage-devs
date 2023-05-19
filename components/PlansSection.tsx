@@ -3,6 +3,7 @@ import { CustomButton } from "./ui";
 
 import { Check } from "@mui/icons-material";
 import { Grid, Typography, Divider, List, ListItem, ListItemIcon, ListItemText, Box } from "@mui/material"
+import Link from "next/link";
 
 const basicDetails = [
     "4 Secciones.",
@@ -30,8 +31,8 @@ const autogestDetails = [
     "Dominio Gratuito.",
     "Certificado SSL.",
     "Soporte 24/7.",
-    "Panel de Administrador.",
     "Email marketing incluido.",
+    "Gestión de clientes, productos, stock y pedidos."
 ];
 
 export const PlansSection: FC = () => {
@@ -48,7 +49,7 @@ export const PlansSection: FC = () => {
                     <Typography variant='h5' mb={5}> Básica </Typography>
                     <Typography mb={2}>Ideal para que tu negocio o proyecto tenga presencia online.</Typography>
                     <Divider />
-                    <List >
+                    <List sx={{ minHeight: 250 }} >
                         {basicDetails.map(text => (
                             <ListItem disablePadding key={text}>
                                 <ListItemIcon sx={{ minWidth: "40px" }}>
@@ -60,7 +61,9 @@ export const PlansSection: FC = () => {
                     </List >
                     <Divider />
                     <Box textAlign="center" mt={2}>
-                        <CustomButton text='CONTRATAR' />
+                        <Link href="/plans/basic">
+                            <CustomButton text='CONTRATAR' />
+                        </Link>
                     </Box>
                 </Grid>
 
@@ -93,7 +96,7 @@ export const PlansSection: FC = () => {
                     <Typography variant='h5' mb={5}> Autogestionable </Typography>
                     <Typography mb={2}>Ten el control absoluto de tu sitio!. Ideal para negocios en expansión.</Typography>
                     <Divider />
-                    <List >
+                    <List sx={{ minHeight: 250 }}  >
                         {autogestDetails.map(text => (
                             <ListItem disablePadding key={text}>
                                 <ListItemIcon sx={{ minWidth: "40px" }}>

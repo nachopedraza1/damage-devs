@@ -8,7 +8,7 @@ import { Grid, Typography } from '@mui/material';
 
 const AboutPage: NextPage = () => {
     return (
-        <Layout title="DMGDEVS - Nosotros">
+        <Layout title="Damage Devs - Nosotros">
 
             <Grid container justifyContent="center" alignItems="center" direction="column" mt={5} mb={5}>
                 <Typography variant="subtitle1"> Emprendedores como vos </Typography>

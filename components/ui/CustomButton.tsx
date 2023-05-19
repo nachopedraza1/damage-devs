@@ -15,7 +15,7 @@ export const CustomButton: FC<{ text: string }> = ({ text }) => {
                 <div className="glowing-box-borders" />
             </div>
             <Typography className="glowing-box-button inline-block"
-                style={{ border: "1px solid rgba(255, 255, 255, 0.1)", textTransform: "uppercase", fontWeight:600 }}
+                style={{ border: "1px solid rgba(255, 255, 255, 0.1)", textTransform: "uppercase", fontWeight:600, color:"white" }}
             >
                 {text}
             </Typography>

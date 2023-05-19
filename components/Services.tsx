@@ -13,22 +13,24 @@ const services = [
 
 export const Services: FC = () => {
     return (
-        <Grid container justifyContent="space-between" gap={4}>
-            <Grid item xs={12} display="flex" direction="column" alignItems="center">
+        <>
+            <Grid container direction="column" alignItems="center" mb={4}>
                 <Typography variant="h4" fontWeight={600}> Nuestros servicios </Typography>
                 <span className='mini-divider'></span>
             </Grid>
 
-            {services.map(({ title, text, icon, path }) => (
-                <Grid item xs={3.7} className="services-box" key={title}>
-                    {icon}
-                    <Typography variant="h5" fontWeight={600} textAlign="center" mb={1}> {title} </Typography>
-                    <Typography mb={3}>
-                        {text}
-                    </Typography>
-                    <Button variant="contained" sx={{ textAlign: "end" }}> VER MAS </Button>
-                </Grid>
-            ))}
-        </Grid>
+            <Grid container justifyContent="space-between" gap={4}>
+                {services.map(({ title, text, icon, path }) => (
+                    <Grid item xs={3.7} className="services-box" key={title}>
+                        {icon}
+                        <Typography variant="h5" fontWeight={600} textAlign="center" mb={1}> {title} </Typography>
+                        <Typography mb={3}>
+                            {text}
+                        </Typography>
+                        <Button variant="contained" sx={{ textAlign: "end" }}> VER MAS </Button>
+                    </Grid>
+                ))}
+            </Grid>
+        </>
     )
 }

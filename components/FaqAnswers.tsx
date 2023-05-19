@@ -1,5 +1,9 @@
-import { Accordion, AccordionSummary, Typography, AccordionDetails } from "@mui/material";
 import { FC, SyntheticEvent, useState } from "react"
+import Link from "next/link";
+
+import { ListItemMapped } from "./ListItemMapped";
+
+import { Accordion, AccordionSummary, Typography, AccordionDetails, Grid, Link as MuiLink } from "@mui/material";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export const FaqAnswers: FC = () => {
@@ -13,7 +17,24 @@ export const FaqAnswers: FC = () => {
 
     return (
         <div>
+
+            <Grid container justifyContent="center" alignItems="center" direction="column" mt={5} mb={5}>
+                <Typography variant='h6' > Mas Información </Typography>
+                <Typography variant="subtitle1"> Preguntas Frecuentes</Typography>
+                <span className='mini-divider'></span>
+            </Grid>
+
             <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} className='acordion-item'>
+                <AccordionSummary expandIcon={<ExpandMoreIcon color='primary' />}>
+                    <Typography>¿Qué hace una agencia de diseño web?</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <Typography>
+                        Las agencias se encargan de desarrollar y mantener sitios web. A través de tendencias digitales, se inspiran en crear páginas web profesionales, con foco en el negocio de cada cliente.
+                    </Typography>
+                </AccordionDetails>
+            </Accordion>
+            <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')} className='acordion-item'>
                 <AccordionSummary expandIcon={<ExpandMoreIcon color='primary' />} >
                     <Typography> ¿Cómo y a través de qué medios puedo pagar el servicio? </Typography>
                 </AccordionSummary>
@@ -25,28 +46,57 @@ export const FaqAnswers: FC = () => {
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-            <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')} className='acordion-item'>
+            <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')} className='acordion-item'>
                 <AccordionSummary expandIcon={<ExpandMoreIcon color='primary' />}>
-                    <Typography>¿Cómo funciona el rembolso y cómo reclamo mi dinero?</Typography>
+                    <Typography>¿Cuáles son los beneficios de contratar una agencia de diseño web?</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
-                        Pensamos y desarrollamos nuestros servicios con el objetivo de satisfacerte en un 100% y esperando cumplir con todas tus expectativas.
-                        Por esta razón te brindamos la posibilidad de utilizar el servicio durante 30 días, devolviéndote tu dinero si no deseas continuar utilizándolo.
-                        Para desactivar el servicio y solicitar el reembolso del dinero, simplemente contáctanos a través de Mesa de Soporte o chat de Atención al Cliente,
-                        indicándonos tu decisión.
+                        Contar con una agencia de desarrollo web es clave. Algunos beneficios son:
+                    </Typography>
+                    <ListItemMapped disableLink arrayLinks={[
+                        { title: "Mejoras en el rendimiento del sitio web (y por ende en la experiencia del usuario)." },
+                        { title: "Contar con soporte técnico en caso que lo necesites." },
+                        { title: "Podrás centrarte en tus tareas del negocio, mientras que de la web se encargaran los diseñadores/programadores." },
+                        { title: "El sitio web contará con toda la optimización necesaria para mejorar la performance." },
+                    ]} />
+                </AccordionDetails>
+            </Accordion>
+            <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')} className='acordion-item'>
+                <AccordionSummary expandIcon={<ExpandMoreIcon color='primary' />} >
+                    <Typography> ¿Por qué contratar una agencia de diseño web </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <Typography>
+                        El crecimiento digital es imparable, y aún hay una brecha muy importante
+                        que no se está abarcando. Tener un negocio online hoy en día es necesario en cualquier rubro.
+                        Ya sea que vendas servicios, productos, o simplemente quieras tener un perfil profesional,
+                        contar con una página web pensada para llegar a tus potenciales clientes,
+                        hará que tu negocio crezca.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-            <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')} className='acordion-item'>
-                <AccordionSummary expandIcon={<ExpandMoreIcon color='primary' />}>
-                    <Typography>3 - Asesoramiento y soporte de primer nivel</Typography>
+            <Accordion expanded={expanded === 'panel5'} onChange={handleChange('panel5')} className='acordion-item'>
+                <AccordionSummary expandIcon={<ExpandMoreIcon color='primary' />} >
+                    <Typography> ¿Cuáles son los precios para contratar agencia de diseño y desarrollo web en Argentina? </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
-                        Contamos con videos tutoriales bien profesionales y detallados para ayudarlo a tener un negocio mucho más productivo y organizado.
-                        Ademas, si tenemos que ayudarle con algun tramite o configuración online, como: comprar un dominio, configurar un correo corporativo, etc.
-                        lo hacemos con gusto y sin ningun recargo adicional.
+                        Los precios de diseño web en Argentina varían en función de la dimensión y la complejidad de cada proyecto.
+                        Como referencia, el desarrollo de un sitio web de única página (Landing page) va desde los $40.000 ARS / 100 USD , y una tienda online
+                        (ecommerce) va desde los $140.000 ARS / 350 USD. Estos valores se abonan por única vez. Para información más detallada,
+                        visita nuestra <MuiLink component={Link} href="/plans" color="primary.main" sx={{ textDecoration: "underline" }}> seccion de planes. </MuiLink>
+                    </Typography>
+                </AccordionDetails>
+            </Accordion>
+            <Accordion expanded={expanded === 'panel6'} onChange={handleChange('panel6')} className='acordion-item'>
+                <AccordionSummary expandIcon={<ExpandMoreIcon color='primary' />} >
+                    <Typography> ¿Cuál es el costo por mantener un sitio web? </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <Typography>
+                        Si estás buscando un mantenimiento web de tu página web en Argentina, los valores inician desde los
+                        $2.500 ARS / 10 USD mensuales para las Landing page, y desde los $3.500 ARS / 15 USD mensuales para tiendas online.
                     </Typography>
                 </AccordionDetails>
             </Accordion>

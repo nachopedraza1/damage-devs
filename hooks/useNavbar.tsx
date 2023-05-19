@@ -22,7 +22,7 @@ export const useNavbar = (props: Props) => {
 
     useEffect(() => {
         if (pathname === "/") return setActiveTab("start-home");
-        if (pathname.includes("designs")) return setActiveTab("start-designs");
+        if (pathname.includes("plans")) return setActiveTab("start-plans");
         setActiveTab(`start-${pathname.substring(1)} `)
     }, [pathname])
 

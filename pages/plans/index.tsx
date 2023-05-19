@@ -7,10 +7,10 @@ import { Grid, Typography, Button, } from '@mui/material';
 import { WhatsApp } from '@mui/icons-material';
 
 
-const WorksPage: NextPage = () => {
+const PlansPage: NextPage = () => {
 
     return (
-        <Layout title="DMGDEVS - Planes">
+        <Layout title="Damage Devs - Planes">
 
             <PlansSection />
 
@@ -27,4 +27,4 @@ const WorksPage: NextPage = () => {
     )
 }
 
-export default WorksPage
+export default PlansPage;
