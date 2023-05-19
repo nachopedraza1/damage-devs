@@ -31,7 +31,7 @@ export const Navbar = (props: Props) => {
                     <Toolbar disableGutters className={`navbar-blur ${navbarStyle}`}>
                         <Container maxWidth="lg">
                             <Grid container alignItems="center" justifyContent="space-between" gap={2}>
-                                <Image src={`/images/logodmg.png`} alt='Damage devs' width={100} height={33} />
+                                <Image src={`/images/logodmg1.png`} alt='Damage devs' width={100} height={33} />
                                 <nav>
                                     {navLinks.map(({ id, path, text }) => (
                                         <Link

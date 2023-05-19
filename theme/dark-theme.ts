@@ -35,6 +35,16 @@ export const darkTheme = createTheme({
             styleOverrides: {
                 root: {
                     fontFamily: "Poppins"
+                },
+                subtitle1: {
+                    fontSize: "2.125rem",
+                    fontWeight: 600,
+                    lineHeight: "42px"
+                },
+                subtitle2: {
+                    fontSize: "1.5rem",
+                    fontWeight: 600,
+                    lineHeight: "42px"
                 }
             }
         },
@@ -87,9 +97,13 @@ export const darkTheme = createTheme({
         MuiTab: {
             styleOverrides: {
                 root: {
+                    transition: "all 0.3s",
                     fontWeight: 600,
                     fontFamily: "Poppins",
                     fontSize: 16,
+                    "&:hover": {
+                        transform: "scale(105%)"
+                    }
                 }
             }
         },

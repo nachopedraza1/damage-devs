@@ -1,7 +1,8 @@
-import { Check } from "@mui/icons-material"
+import { FC } from "react";
+import { CustomButton } from "./ui";
+
+import { Check } from "@mui/icons-material";
 import { Grid, Typography, Divider, List, ListItem, ListItemIcon, ListItemText, Box } from "@mui/material"
-import { FC } from "react"
-import { CustomButton } from "./ui"
 
 const basicDetails = [
     "4 Secciones.",
@@ -37,8 +38,8 @@ export const PlansSection: FC = () => {
     return (
         <>
             <Grid container justifyContent="center" alignItems="center" direction="column" mt={5} mb={5}>
-                <Typography variant='h6' > Acá puede ver </Typography>
-                <Typography variant='h4' fontWeight={600}> Nuestros Planes </Typography>
+                <Typography variant='h6'> Acá puede ver </Typography>
+                <Typography variant="subtitle1"> Nuestros Planes </Typography>
                 <span className='mini-divider'></span>
             </Grid>
 

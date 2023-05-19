@@ -1,7 +1,9 @@
-import { ServicesTabs } from '@/components';
-import { Layout } from '@/components/layouts';
-import { Grid, Typography } from '@mui/material';
 import { NextPage } from 'next';
+
+import { Layout } from '@/components/layouts';
+import { ServicesTabs, StatsGroup } from '@/components';
+
+import { Grid, Typography } from '@mui/material';
 
 const ServicesPage: NextPage = () => {
     return (
@@ -9,12 +11,13 @@ const ServicesPage: NextPage = () => {
 
             <Grid container justifyContent="center" alignItems="center" direction="column" mt={5} mb={5}>
                 <Typography variant='h6' > Acá puede ver </Typography>
-                <Typography variant='h4' fontWeight={600}> Nuestros Servicios </Typography>
+                <Typography variant="subtitle1"> Nuestros Servicios </Typography>
                 <span className='mini-divider'></span>
-
-                <ServicesTabs />
-
             </Grid>
+            
+            <ServicesTabs />
+
+            <StatsGroup />
         </Layout>
     )
 }

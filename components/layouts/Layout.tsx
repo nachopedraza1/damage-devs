@@ -1,7 +1,7 @@
 import { FC, ReactNode } from "react"
 import Head from "next/head"
 
-import { Container } from '@mui/material';
+import { Container, Box } from '@mui/material';
 import { Blob } from "@/components/ui";
 
 interface Props {
@@ -22,7 +22,9 @@ export const Layout: FC<Props> = ({ children, title }) => {
                 <Blob width="60%" top="1250px" left="-3%" />
                 <Blob width="60%" top="2050px" right={-150} />
                 <Blob width="60%" top="2550px" left="-3%" />
-                {children}
+                <Box className="fade">
+                    {children}
+                </Box>
             </Container >
         </div>
     )

@@ -2,10 +2,10 @@ import { FC } from "react";
 import Image from "next/image"
 
 import { ListItemMapped } from "../ListItemMapped";
+import { SocialButtons } from "./SocialButtons";
 
 import { Container, Grid, Typography, Divider } from "@mui/material"
 import { Brush, BuildCircle, Email, ImportantDevices, Language, LocalPhone, LocationOn, Moving, OfflineBolt, Recommend, SettingsSuggest, ShoppingBasket, Stars, Storage } from "@mui/icons-material"
-import { SocialButtons } from "./SocialButtons";
 
 
 const services = [
@@ -38,7 +38,7 @@ export const Footer: FC = () => {
                 <Grid container justifyContent="space-between" alignItems="start" spacing={5} >
 
                     <Grid item xs={3}>
-                        <Image src={`/images/logodmg.png`} alt='Damage devs' width={100} height={33} />
+                        <Image src={`/images/logodmg3.png`} alt='Damage devs' width={100} height={33} />
                         <span className="mini-divider" />
                         <Typography> Ponemos el foco en vos y en tu proyecto. Por eso trabajamos de forma conjunta para que tu negocio sea un éxito. </Typography>
                         <SocialButtons />

@@ -2,6 +2,10 @@ body {
     overflow-x: hidden;
 }
 
+img {
+    transition: all 0.3s;
+}
+
 ::-webkit-scrollbar {
     background: #040612;
     width: 4px;
@@ -448,11 +452,30 @@ nav .active {
     padding-top: 30px;
 }
 
-
 .mini-divider {
     background-color: #08b8ef;
     margin: 15px 0px;
     display: block;
     width: 60px;
     height: 2px;
+}
+
+.image:hover {
+    transform: translateY(-10px);
+}
+
+.fade {
+    animation: fadeInAnimation ease 1.1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
