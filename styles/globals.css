@@ -290,10 +290,16 @@ nav .active {
     cursor: default;
 }
 
+.services-box h5 {
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 .services-box svg {
     width: 100%;
     text-align: center;
-    font-size: 90px;
+    font-size: 80px;
     margin-bottom: 15px;
     transition: all 0.4s;
 }
@@ -312,6 +318,80 @@ nav .active {
 
 .services-box p {
     color: #84859d;
+}
+
+.services-box-mini {
+    transition: all 0.4s;
+    padding: 10px 20px;
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.services-box-mini p {
+    color: #84859d;
+}
+
+.services-box-mini svg {
+    font-size: 50px;
+    margin-bottom: 15px;
+    transition: all 0.4s;
+}
+
+.services-box-mini:hover {
+    cursor: default;
+    background: #1d1b1b;
+    border-radius: 10px;
+    transform: translateY(-5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+}
+
+.services-box-mini:hover svg {
+    transform: scale(120%);
+    transition: all 0.4s;
+}
+
+.benefit-box {
+    background: #1d1b1b;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.benefit-box svg {
+    font-size: 50px;
+}
+
+.benefit-box p {
+    color: #84859d;
+}
+
+.month-box {
+    transition: all 0.3s;
+    background: #1d1b1b;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+}
+
+.month-box h6 {
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.month-box svg {
+    font-size: 40px;
+    transition: all 0.4s;
+}
+
+.month-box p {
+    color: #84859d;
+}
+
+.month-box:hover {
+    cursor: default;
+    transform: translateY(-5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
 }
 
 .scroll {

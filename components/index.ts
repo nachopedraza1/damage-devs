@@ -4,6 +4,8 @@ export * from './FaqAnswers';
 export * from './AcordionHome';
 export * from './PlansSection';
 export * from './ServicesTabs';
+export * from './BenefitsGroup';
+export * from './MonthlyPayment';
 export * from './TableFunctions';
 export * from './ListItemMapped';
 export * from './CharacteristicsWebs';

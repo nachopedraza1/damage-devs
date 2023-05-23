@@ -11,7 +11,7 @@ const HomePage: NextPage = () => {
 
   return (
     <>
-      <Layout title="Damage Devs - - Home">
+      <Layout title="Damage Devs - Home">
 
         <Grid container justifyContent="space-between" alignItems="center" pt={4} mb={4}>
           <Grid item xs={5} position="relative">

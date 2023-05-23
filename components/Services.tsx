@@ -23,7 +23,7 @@ export const Services: FC = () => {
                 {services.map(({ title, text, icon, path }) => (
                     <Grid item xs={3.7} className="services-box" key={title}>
                         {icon}
-                        <Typography variant="h5" fontWeight={600} textAlign="center" mb={1}> {title} </Typography>
+                        <Typography variant="h5"> {title} </Typography>
                         <Typography mb={3}>
                             {text}
                         </Typography>

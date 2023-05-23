@@ -24,23 +24,26 @@ export const FaqAnswers: FC = () => {
 
             <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} className='acordion-item'>
                 <AccordionSummary expandIcon={<ExpandMoreIcon color='primary' />}>
-                    <Typography>¿Qué hace una agencia de diseño web?</Typography>
+                    <Typography>¿A medida que trabajan en mi nueva web, puedo ver avances?</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
-                        Las agencias se encargan de desarrollar y mantener sitios web. A través de tendencias digitales, se inspiran en crear páginas web profesionales, con foco en el negocio de cada cliente.
+                        Sí.  Durante la etapa de desarrollo, utilizamos un servidor de prueba (te brindamos un link específico)
+                        para que puedas ver el diseño web en proceso y las modificaciones generadas en la etapa de revisión.
+                        Dado que se trata de un servicio profesional de alta calidad, por prolijidad sólo utilizaremos el dominio real
+                        de tu empresa una vez que la web esté lista y chequeada para ser subida.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
             <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')} className='acordion-item'>
                 <AccordionSummary expandIcon={<ExpandMoreIcon color='primary' />} >
-                    <Typography> ¿Cómo y a través de qué medios puedo pagar el servicio? </Typography>
+                    <Typography> ¿Realizan modificaciones sobre sitios web existentes? </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
-                        No importa que proyecto o plan tenga con nosotros, nuestro mayor enfoque y prioridad es la satisfacción de nuestros clientes.
-                        Si tenemos que darle una mano por algún problema, aconsejarle o guiarlo en algun proceso, tenga 100% la certeza de que lo vamos
-                        hacer y sin pasarle una factura de por medio.
+                        Si. Efectivamente, podemos realizar modificaciones sobre sitios web ya existentes.  Es probable que
+                        podamos hacerte algunas sugerencias sobre oportunidades de mejora en aspectos visuales y de marketing
+                        digital si fuera necesario.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -76,14 +79,15 @@ export const FaqAnswers: FC = () => {
             </Accordion>
             <Accordion expanded={expanded === 'panel5'} onChange={handleChange('panel5')} className='acordion-item'>
                 <AccordionSummary expandIcon={<ExpandMoreIcon color='primary' />} >
-                    <Typography> ¿Cuáles son los precios para contratar agencia de diseño y desarrollo web en Argentina? </Typography>
+                    <Typography> ¿Cuánto cuesta realizar una página web? </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
-                        Los precios de diseño web en Argentina varían en función de la dimensión y la complejidad de cada proyecto.
-                        Como referencia, el desarrollo de un sitio web de única página (Landing page) va desde los $40.000 ARS / 100 USD , y una tienda online
-                        (ecommerce) va desde los $140.000 ARS / 350 USD. Estos valores se abonan por única vez. Para información más detallada,
-                        visita nuestra <MuiLink component={Link} href="/plans" color="primary.main" sx={{ textDecoration: "underline" }}> seccion de planes. </MuiLink>
+                        Ciertamente, cada proyecto en diseño web es diferente.  Por ello, la cantidad de tiempo de desarrollo asociado varía
+                        de proyecto a proyecto y por ende su costo.  Sin embargo, para simplificar el proceso de presupuestación, podés ponerte
+                        en  <MuiLink component={Link} href="/plans" color="primary.main" sx={{ textDecoration: "underline" }}> contacto con nosotros </MuiLink>
+                        te haremos algunas preguntas simples que son claves para entender tus requerimientos y te presentaremos
+                        la propuesta más conveniente.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -95,6 +99,42 @@ export const FaqAnswers: FC = () => {
                     <Typography>
                         Si estás buscando un mantenimiento web de tu página web en Argentina, los valores inician desde los
                         $2.500 ARS / 10 USD mensuales para las Landing page, y desde los $3.500 ARS / 15 USD mensuales para tiendas online.
+                    </Typography>
+                </AccordionDetails>
+            </Accordion>
+            <Accordion expanded={expanded === 'panel7'} onChange={handleChange('panel7')} className='acordion-item'>
+                <AccordionSummary expandIcon={<ExpandMoreIcon color='primary' />} >
+                    <Typography> ¿Cuánto tiempo lleva disponer de mi nueva página web? </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <Typography>
+                        Cada proyecto es particular y diferente, pero usualmente la mayoría de los desarrollos web se completan
+                        en un plazo no mayor a 30 días desde la confirmación del trabajo, contando con la información requerida.
+                    </Typography>
+                </AccordionDetails>
+            </Accordion>
+            <Accordion expanded={expanded === 'panel8'} onChange={handleChange('panel8')} className='acordion-item'>
+                <AccordionSummary expandIcon={<ExpandMoreIcon color='primary' />} >
+                    <Typography> Ya tengo una web y quisiera transformarla en autoadministrable…es posible? </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <Typography>
+                        Sí, es posible.  La complejidad de esta tarea dependerá de la naturaleza técnica del sitio web a modificar.
+                        Trabajamos con tecnología autoadministrable sumamente eficaz y conocida, agregando elementos de programación
+                        propios que hacen la edición de tu página web aún mucho más sencilla y ágil.
+                    </Typography>
+                </AccordionDetails>
+            </Accordion>
+            <Accordion expanded={expanded === 'panel9'} onChange={handleChange('panel9')} className='acordion-item'>
+                <AccordionSummary expandIcon={<ExpandMoreIcon color='primary' />} >
+                    <Typography> Mi nueva página web, ¿funcionará correctamente en celulares smartphone? </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <Typography>
+                        En Damage Devs utilizamos la más moderna tecnología responsive (“adaptativa”) como una característica
+                        incluida en todos nuestros diseños.  Los contenidos de tu web se ajustarán automáticamente a los
+                        tamaños de diferentes dispositivos como celulares y tablets, logrando una óptima experiencia del
+                        usuario en cada caso.  Esto constituye una muy importante ventaja competitiva online.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
