@@ -18,11 +18,13 @@
     "@types/react-dom": "18.2.4",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.2",
+    "formik": "^2.2.9",
     "next": "13.4.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-intersection-observer": "^9.4.3",
     "typescript": "5.0.4",
-    "use-count-up": "^3.0.1"
+    "use-count-up": "^3.0.1",
+    "yup": "^1.1.1"
   }
 }

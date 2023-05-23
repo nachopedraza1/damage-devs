@@ -1,6 +1,11 @@
-import { FC, FormEvent, useContext, useState } from "react"
-import { Button, Modal, Fade, Box, Typography, Step, StepLabel, Stepper } from "@mui/material"
+import { FC, useContext, useState } from "react"
 import { UiContext } from "@/context/UiContext";
+
+import { Button, Modal, Fade, Box, Step, StepLabel, Stepper, TextField } from "@mui/material"
+
+import { Formik, Form, ErrorMessage, Field, FormikHelpers } from "formik";
+import { YupValidation } from "@/helpers/YupValidation";
+
 
 const style = {
     position: 'absolute' as 'absolute',
@@ -15,11 +20,36 @@ const style = {
     p: 3,
 };
 
+
+const initialValue = {
+    name: "",
+    email: "",
+    phoneNumber: "",
+};
+
+interface Values {
+    name: string,
+    email: string,
+    phoneNumber: string,
+}
+
 const steps = ['Selecciona un plan', 'Información', 'Confirmación'];
 
 export const ModalOrder: FC = () => {
 
-    const { openModal, handleCloseModal } = useContext(UiContext)
+    const [step, setStep] = useState(1)
+
+    const { openModal, handleCloseModal } = useContext(UiContext);
+
+    const nextStep = () => setStep(step + 1);
+    const backStep = () => setStep(step - 1);
+
+    const handleSubmit = (values: Values, props: FormikHelpers<Values>) => {
+        console.log(values);
+        alert(JSON.stringify(values));
+
+        props.resetForm();
+    };
 
 
     return (
@@ -32,7 +62,7 @@ export const ModalOrder: FC = () => {
                 <Fade in={openModal}>
                     <Box sx={style}>
                         <Box sx={{ width: '100%' }}>
-                            <Stepper activeStep={1} alternativeLabel>
+                            <Stepper activeStep={step} alternativeLabel>
                                 {steps.map((label) => (
                                     <Step key={label}>
                                         <StepLabel>{label}</StepLabel>
@@ -41,15 +71,80 @@ export const ModalOrder: FC = () => {
                             </Stepper>
                         </Box>
                         <Box>
-                                    
+                            <Formik
+                                initialValues={initialValue}
+                                validationSchema={YupValidation}
+                                onSubmit={handleSubmit}
+                            >
+                                {(props) => {
+
+                                    return (
+                                        <Form>
+                                            <Field
+                                                as={TextField}
+                                                label="Name"
+                                                name="name"
+                                                fullWidth
+                                                variant="outlined"
+                                                margin="dense"
+                                                onChange={props.handleChange}
+                                                onBlur={props.handleBlur}
+                                                helperText={<ErrorMessage name="name" />}
+                                                error={props.errors.name && props.touched.name as any}
+                                                required
+                                            />
+
+                                            <Field
+                                                as={TextField}
+                                                label="Email"
+                                                type="Email"
+                                                name="email"
+                                                fullWidth
+                                                variant="outlined"
+                                                margin="dense"
+                                                helperText={<ErrorMessage name="email" />}
+                                                error={props.errors.email && props.touched.email}
+                                            />
+
+                                            <Field
+                                                as={TextField}
+                                                label="Phone Number"
+                                                name="phoneNumber"
+                                                fullWidth
+                                                variant="outlined"
+                                                margin="dense"
+                                                helperText={<ErrorMessage name="phoneNumber" />}
+                                                error={
+                                                    props.errors.phoneNumber && props.touched.phoneNumber
+                                                }
+                                            />
+                                            <Button
+                                                variant="contained"
+                                                type="submit"
+                                                color="primary"
+                                                fullWidth
+                                            >
+                                                Submit
+                                            </Button>
+                                        </Form>
+                                    );
+                                }}
+                            </Formik>
                         </Box>
                         <Box display="flex" justifyContent="space-between">
-                            <Button variant="contained">
+                            <Button variant="contained" disabled={step === 1} onClick={backStep}>
                                 BACK
                             </Button>
-                            <Button variant="contained">
-                                Next
-                            </Button>
+                            {
+                                step <= 1 ?
+                                    <Button variant="contained" onClick={nextStep} >
+                                        Next
+                                    </Button>
+                                    :
+                                    <Button variant="contained" >
+                                        Enviar
+                                    </Button>
+                            }
                         </Box>
                     </Box>
                 </Fade>
