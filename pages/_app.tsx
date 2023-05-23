@@ -5,12 +5,16 @@ import type { AppProps } from 'next/app'
 import { AppTheme } from '@/theme'
 import { Footer, Navbar } from '@/components/ui'
 
+import { UiProvider } from '../context/uiProvider';
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <AppTheme>
-      <Navbar />
-      <Component {...pageProps} />
-      <Footer />
-    </AppTheme>
+    <UiProvider>
+      <AppTheme>
+        <Navbar />
+        <Component {...pageProps} />
+        <Footer />
+      </AppTheme>
+    </UiProvider>
   )
 }

@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Grid, Typography, Button } from "@mui/material"
 import { ImportantDevices, ShoppingBasket, SettingsSuggest, Brush, Moving, Storage } from "@mui/icons-material"
+import Link from "next/link";
 
 const services = [
     { title: "Diseño web", text: "Realizamos un servicio de diseño web personalizado, profesional y detallista, utilizando las últimas tendencias de UX y optimizadas para verse en dispositivos móviles.", path: "", icon: <ImportantDevices /> },
@@ -27,7 +28,9 @@ export const Services: FC = () => {
                         <Typography mb={3}>
                             {text}
                         </Typography>
-                        <Button variant="contained" sx={{ textAlign: "end" }}> VER MAS </Button>
+                        <Link href="/services">
+                            <Button variant="contained" sx={{ textAlign: "end" }}> VER MAS </Button>
+                        </Link>
                     </Grid>
                 ))}
             </Grid>

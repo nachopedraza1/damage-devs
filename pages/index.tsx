@@ -17,7 +17,7 @@ const HomePage: NextPage = () => {
           <Grid item xs={5} position="relative">
             <Typography variant="subtitle1" mb={2}>Diseñamos páginas web éxitosas, con estándares de última generación</Typography>
             <Typography variant="h6" mb={2}>Somos la mejor agencia en brindar atención personalizada y entregar el mejor soporte a nuestros clientes.</Typography>
-            <CustomButton text="ver trabajos" />
+            <CustomButton text="ver trabajos" link="/portfolio" />
             <MouseScroll />
           </Grid>
           <Grid item xs={6}>
