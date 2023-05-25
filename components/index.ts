@@ -1,4 +1,5 @@
 export * from './Services';
+export * from './OrderForm';
 export * from './StatsGroup';
 export * from './FaqAnswers';
 export * from './ModalOrder';

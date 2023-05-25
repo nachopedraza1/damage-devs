@@ -107,10 +107,20 @@ export const darkTheme = createTheme({
                 }
             }
         },
-        MuiBreadcrumbs:{
-            styleOverrides:{
-                root:{
+        MuiBreadcrumbs: {
+            styleOverrides: {
+                root: {
                     marginBottom: 3
+                }
+            }
+        },
+        MuiOutlinedInput: {
+            styleOverrides: {
+                input: {
+                    '&:-webkit-autofill': {
+                        '-webkit-box-shadow': '0 0 0 100px #1d1b1b inset',
+                        '-webkit-text-fill-color': '#fff'
+                    }
                 }
             }
         }
