@@ -6,6 +6,7 @@ export * from './ModalOrder';
 export * from './AcordionHome';
 export * from './PlansSection';
 export * from './ServicesTabs';
+export * from './ConfirmOrder';
 export * from './BenefitsGroup';
 export * from './MonthlyPayment';
 export * from './TableFunctions';

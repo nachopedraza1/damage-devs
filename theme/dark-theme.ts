@@ -118,11 +118,21 @@ export const darkTheme = createTheme({
             styleOverrides: {
                 input: {
                     '&:-webkit-autofill': {
-                        '-webkit-box-shadow': '0 0 0 100px #1d1b1b inset',
-                        '-webkit-text-fill-color': '#fff'
+                        'WebkitBoxShadow': '0 0 0 100px #1d1b1b inset',
+                        'WebkitTextFillColor': '#fff'
                     }
                 }
             }
+        },
+        MuiStepLabel: {
+            styleOverrides: {
+                root: {
+                    "& span": {
+                        fontFamily: "Poppins"
+                    },
+                }
+            }
         }
+
     },
 })

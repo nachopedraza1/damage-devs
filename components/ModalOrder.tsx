@@ -1,13 +1,13 @@
 import { FC, useContext, useState } from "react"
 import { UiContext } from "@/context/UiContext";
 
-import { Button, Modal, Fade, Box, Step, StepLabel, Stepper, TextField, IconButton } from "@mui/material"
+import { Modal, Fade, Box, Step, StepLabel, Stepper, IconButton, Divider } from "@mui/material"
+import { ArrowBack } from "@mui/icons-material";
 
-import { Formik, Form, ErrorMessage, Field, FormikHelpers } from "formik";
-import { YupValidation } from "@/helpers/YupValidation";
-import { ArrowBack, Check } from "@mui/icons-material";
-import { OrderForm } from "./OrderForm";
+import { OrderForm, ConfirmOrder } from "@/components";
 
+import { FormData } from "@/interfaces";
+import { useStepper } from "@/hooks";
 
 const style = {
     position: 'absolute' as 'absolute',
@@ -27,12 +27,15 @@ const steps = ['Selecciona un plan', 'Información', 'Confirmación'];
 
 export const ModalOrder: FC = () => {
 
-    const [step, setStep] = useState(1)
-
     const { openModal, handleCloseModal } = useContext(UiContext);
 
-    const nextStep = () => setStep(step + 1);
-    const backStep = () => setStep(step - 1);
+    const { step, nextStep, backStep } = useStepper();
+
+    const [formData, setFormData] = useState<FormData>({});
+    const handleSubmit = (formData: FormData) => {
+        setFormData(formData);
+        nextStep();
+    };
 
     return (
         <div>
@@ -51,24 +54,21 @@ export const ModalOrder: FC = () => {
                                     </Step>
                                 ))}
                             </Stepper>
+                            <Divider sx={{ mt: 2 }} />
                             {
-                                step === 2 &&
+                                step >= 2 &&
                                 <IconButton onClick={backStep} sx={{ position: "absolute", top: -5 }}>
                                     <ArrowBack />
                                 </IconButton>
                             }
                         </Box>
-                        <OrderForm nextStep={nextStep} />
+                        <Box minHeight={300} pt={2}>
+                            {step === 1 && <OrderForm handleSubmit={handleSubmit} />}
+                            {step === 2 && <ConfirmOrder {...formData} />}
+                        </Box>
                     </Box>
                 </Fade>
             </Modal>
         </div>
     )
 }
-
-/* const onSubmitOrder = async (event: FormEvent) => {
-    event.preventDefault();
-
-    const API = `https://api.whatsapp.com/send?phone=543513295515&text= Hola, quiero contratar el plan Tienda Online.`;
-    window.open(API, '_blank')
-} */

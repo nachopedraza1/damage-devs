@@ -1,28 +1,25 @@
-import { YupValidation } from "@/helpers/YupValidation";
-import { Check } from "@mui/icons-material";
-import { TextField, Button } from "@mui/material";
-import { Formik, Form, Field, ErrorMessage, FormikHelpers } from "formik";
 import { FC } from "react";
 
-interface Values {
-    name: string,
-    email: string,
-    phoneNumber: string,
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import { YupValidation } from "@/helpers/YupValidation";
+
+import { ArrowForward } from "@mui/icons-material";
+import { TextField, Button } from "@mui/material";
+
+import { FormData } from "@/interfaces";
+
+interface Props {
+    handleSubmit: (formData: FormData) => void
 }
 
-const initialValue: Values = {
+const initialValue: FormData = {
     name: "",
     email: "",
     phoneNumber: "",
 };
 
 
-export const OrderForm: FC<{ nextStep: () => void }> = ({ nextStep }) => {
-
-    const handleSubmit = (values: Values, props: FormikHelpers<Values>) => {
-        nextStep()
-        console.log(values);
-    };
+export const OrderForm: FC<Props> = ({ handleSubmit }) => {
 
     return (
         <Formik
@@ -78,9 +75,9 @@ export const OrderForm: FC<{ nextStep: () => void }> = ({ nextStep }) => {
                             type="submit"
                             color="primary"
                             fullWidth
-                            endIcon={<Check />}
+                            endIcon={<ArrowForward />}
                         >
-                            Guardar
+                            Continuar
                         </Button>
                     </Form>
                 );

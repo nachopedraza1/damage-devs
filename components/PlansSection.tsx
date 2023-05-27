@@ -2,8 +2,7 @@ import { FC } from "react";
 import { CustomButton } from "./ui";
 
 import { Check } from "@mui/icons-material";
-import { Grid, Typography, Divider, List, ListItem, ListItemIcon, ListItemText, Box } from "@mui/material"
-import Link from "next/link";
+import { Grid, Typography, Divider, List, ListItem, ListItemIcon, ListItemText, Box } from "@mui/material";
 
 const basicDetails = [
     "4 Secciones.",
