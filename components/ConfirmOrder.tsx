@@ -16,6 +16,9 @@ export const ConfirmOrder: FC<FormData> = ({ email, name, phoneNumber }) => {
         if (pathname.includes("basic")) {
             return "Basico";
         }
+        else if (pathname.includes("autogest")) {
+            return "Autogestionable";
+        }
         else {
             return "Tienda Online";
         }
