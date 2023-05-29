@@ -16,7 +16,7 @@ export const Layout: FC<Props> = ({ children, title }) => {
                 <title> {title} </title>
             </Head>
 
-            <Container maxWidth="lg">
+            <Container maxWidth="lg" sx={{ pt: 6}}>
                 <Blob width="50%" top="-30px" left="2%" />
                 <Blob width="70%" top="500px" left="60%" />
                 <Blob width="60%" top="1250px" left="-3%" />

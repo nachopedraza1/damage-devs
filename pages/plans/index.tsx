@@ -16,11 +16,11 @@ const PlansPage: NextPage = () => {
 
             <TableFunctions />
 
-            <Grid container justifyContent="center" alignItems="center" direction="column" mt={7} mb={7}>
+            <Grid container justifyContent="center" alignItems="center" direction="column" pt={7} mb={7} id="custom">
                 <Typography variant="subtitle2"> ¿Estas buscando un sitio a medida?  </Typography>
                 <Typography variant='h6' > Envíenos un mensaje y cuentenos sobre su proyecto! </Typography>
                 <span className='mini-divider'></span>
-                <Button variant='contained' endIcon={<WhatsApp />}> Contactar </Button>
+                <Button variant='contained' endIcon={<WhatsApp />} href="https://wa.me/3513295515" target='_blank'> Contactar </Button>
             </Grid>
 
             <FaqAnswers />

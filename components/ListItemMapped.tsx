@@ -8,6 +8,7 @@ interface Links {
     title?: string;
     icon?: JSX.Element;
     path?: string;
+    target?: string
 }
 
 export const ListItemMapped: FC<{
@@ -20,8 +21,8 @@ export const ListItemMapped: FC<{
 
     return (
         <List disablePadding >
-            {arrayLinks.map(({ icon, title, path = "" }) => (
-                <MuiLink component={Link} href={path} key={title} style={{ pointerEvents: isLink }}>
+            {arrayLinks.map(({ icon, title, path = "", target = "" }) => (
+                <MuiLink component={Link} href={path} target={target} key={title} style={{ pointerEvents: isLink }}>
                     <ListItem disablePadding key={title}>
                         <ListItemIcon sx={{ minWidth: "40px" }}>
                             {icon || <RadioButtonChecked />}

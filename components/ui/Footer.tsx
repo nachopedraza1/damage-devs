@@ -9,26 +9,26 @@ import { Brush, BuildCircle, Email, ImportantDevices, Language, LocalPhone, Loca
 
 
 const services = [
-    { title: "Diseño web", icon: <ImportantDevices />, path: "" },
-    { title: "eCommerce", icon: <ShoppingBasket />, path: "" },
-    { title: "Mantenimiento web", icon: <SettingsSuggest />, path: "" },
-    { title: "Diseño gráfico", icon: <Brush />, path: "" },
-    { title: "Marketing online", icon: <Moving />, path: "" },
-    { title: "Alojamiento web", icon: <Storage />, path: "" },
+    { title: "Diseño web", icon: <ImportantDevices />, path: "/services" },
+    { title: "eCommerce", icon: <ShoppingBasket />, path: "/services" },
+    { title: "Mantenimiento web", icon: <SettingsSuggest />, path: "/services" },
+    { title: "Diseño gráfico", icon: <Brush />, path: "/services" },
+    { title: "Marketing online", icon: <Moving />, path: "/services" },
+    { title: "Alojamiento web", icon: <Storage />, path: "/services" },
 ];
 
 const plans = [
-    { title: "Web Básica", icon: <Recommend />, path: "" },
-    { title: "Tienda Online", icon: <Stars />, path: "" },
-    { title: "Web Autogestionable", icon: <OfflineBolt />, path: "" },
-    { title: "Personalizada", icon: <BuildCircle />, path: "" },
+    { title: "Web Básica", icon: <Recommend />, path: "/plans/basic" },
+    { title: "Tienda Online", icon: <Stars />, path: "/plans/ecommerce" },
+    { title: "Web Autogestionable", icon: <OfflineBolt />, path: "/plans/autogest" },
+    { title: "Personalizada", icon: <BuildCircle />, path: "/plans#custom" },
 ];
 
 const contact = [
-    { title: "San Vicente, Córdoba.", icon: <LocationOn />, path: "" },
-    { title: "+54-351-3295515", icon: <LocalPhone />, path: "" },
-    { title: "www.damagedevs.com", icon: <Language />, path: "" },
-    { title: "damagedevs@gmail.com", icon: <Email />, path: "" },
+    { title: "San Vicente, Córdoba.", icon: <LocationOn />, path: "https://www.google.com/maps/search/San+Vicente,+C%C3%B3rdoba+2812/@-31.4236324,-64.1502446,17z/data=!3m1!4b1?hl=es&entry=ttu", target: "_blanc" },
+    { title: "+54-351-3295515", icon: <LocalPhone />, path: "https://wa.me/3513295515", target: "_blanc" },
+    { title: "www.damagedevs.com", icon: <Language />, path: "/" },
+    { title: "nachi_choco@live.com.ar", icon: <Email />, path: "mailto:nachi_choco@live.com.ar", target: "_blanc" },
 ]
 
 export const Footer: FC = () => {

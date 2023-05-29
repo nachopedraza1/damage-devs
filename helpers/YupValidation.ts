@@ -6,11 +6,11 @@ const phoneNumberRegEx = /^[0-9]/;
 export const YupValidation = yup.object().shape({
     name: yup
         .string()
-        .min(3, "Too Short !")
-        .max(30, "Too Long !")
-        .required("Required !"),
+        .min(4, "Ingresa 4 caracteres como mínimo.")
+        .max(30, "30 caracteres como máximo.")
+        .required("El nombre es requerido."),
 
-    email: yup.string().email("Enter a Vaid Email").required("Email is Required"),
+    email: yup.string().email("Por favor, ingresa un email válido").required("El Email es requerido."),
 
     /*    password: yup
            .string()
@@ -21,9 +21,10 @@ export const YupValidation = yup.object().shape({
 
     phoneNumber: yup
         .string()
-        .matches(phoneNumberRegEx, "Invalid Phone Number")
-        .max(11, "Invalid Phone Number")
-        .required("Required !"),
+        .matches(phoneNumberRegEx, "Número inválido")
+        .min(7, "Número inválido")
+        .max(11, "Número inválido")
+        .required("El numero de teléfono es requerido."),
 
     /*     confirmPassword: yup
             .string()

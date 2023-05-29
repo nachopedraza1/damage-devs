@@ -3,5 +3,7 @@ export * from './Navbar';
 export * from './Footer';
 export * from './Breadcrumb';
 export * from './MouseScroll';
+export * from './NavbarMobile';
 export * from './CustomButton';
+export * from './NavbarDesktop';
 export * from './SocialButtons';

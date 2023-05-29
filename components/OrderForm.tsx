@@ -33,7 +33,7 @@ export const OrderForm: FC<Props> = ({ handleSubmit }) => {
                     <Form>
                         <Field
                             as={TextField}
-                            label="Name"
+                            label="Nombre completo"
                             name="name"
                             fullWidth
                             variant="outlined"
@@ -59,7 +59,7 @@ export const OrderForm: FC<Props> = ({ handleSubmit }) => {
 
                         <Field
                             as={TextField}
-                            label="Phone Number"
+                            label="Teléfono"
                             name="phoneNumber"
                             fullWidth
                             variant="outlined"
