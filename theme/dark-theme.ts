@@ -132,7 +132,6 @@ export const darkTheme = createTheme({
                     },
                 }
             }
-        }
-
+        },
     },
 })

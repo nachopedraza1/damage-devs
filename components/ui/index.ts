@@ -1,6 +1,7 @@
 export * from './Blob';
 export * from './Navbar';
 export * from './Footer';
+export * from './Sidebar';
 export * from './Breadcrumb';
 export * from './MouseScroll';
 export * from './NavbarMobile';

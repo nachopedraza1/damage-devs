@@ -5,7 +5,7 @@ import type { AppProps } from 'next/app'
 import { AppTheme } from '@/theme'
 import { Footer, Navbar } from '@/components/ui'
 
-import { UiProvider } from '../context/uiProvider';
+import { UiProvider } from '../context/UiProvider';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

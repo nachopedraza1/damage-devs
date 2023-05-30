@@ -1,7 +1,7 @@
 import { CountUp } from "use-count-up"
 import { useInView } from "react-intersection-observer"
 
-import {  Grid, Typography } from "@mui/material"
+import { Grid, Typography } from "@mui/material"
 import { EmojiEvents, HeadsetMic, Person, PersonalVideo } from "@mui/icons-material";
 
 
@@ -17,7 +17,13 @@ export const StatsGroup = () => {
     const { ref, inView } = useInView();
 
     return (
-        <Grid container className="stats-box" ref={ref}>
+        <Grid
+            container
+            ref={ref}
+            className="stats-box"
+            gap={{ xs: 4, sm: 0 }}
+            direction={{ xs: "column", sm: "row" }}
+        >
             {stats.map(({ title, value, icon }) => (
                 <Grid item xs={3} textAlign="center" key={title}>
                     {icon}

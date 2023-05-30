@@ -8,10 +8,12 @@ interface Props {
 
 export interface UiState {
     openModal: boolean;
+    openSideBar: boolean;
 }
 
 const UI_INITIAL_STATE: UiState = {
-    openModal: false
+    openModal: false,
+    openSideBar: false,
 }
 
 export const UiProvider: FC<Props> = ({ children }) => {
@@ -26,11 +28,21 @@ export const UiProvider: FC<Props> = ({ children }) => {
         dispatch({ type: 'UI - Close Modal' })
     }
 
+    const handleOpenSideBar = () => {
+        dispatch({ type: 'UI - Sidebar open' })
+    }
+
+    const handleCloseSideBar = () => {
+        dispatch({ type: 'UI - Sidebar close' })
+    }
+
     return (
         <UiContext.Provider value={{
             ...state,
             handleCloseModal,
             handleOpenModal,
+            handleOpenSideBar,
+            handleCloseSideBar,
         }}>
             {children}
         </UiContext.Provider>

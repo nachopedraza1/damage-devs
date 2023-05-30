@@ -4,7 +4,9 @@ body {
 
 img {
     transition: all 0.3s;
+    object-fit: contain;
 }
+
 
 ::-webkit-scrollbar {
     background: #040612;
