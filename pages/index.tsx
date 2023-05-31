@@ -21,7 +21,7 @@ const HomePage: NextPage = () => {
             <MouseScroll />
           </Grid>
           <Grid item xs={12} md={6.5} position="relative" height={{ xs: 300, sm: 500 }}>
-            <Image src="/images/image-home-web-design-emprebit.png" alt="DMG DEVS" fill />
+            <Image src="/images/image-home-web-design.png" alt="DMG DEVS" fill />
           </Grid>
         </Grid>
 
@@ -36,7 +36,7 @@ const HomePage: NextPage = () => {
             </Typography>
           </Grid>
           <Grid item xs={12} md={5} textAlign="center" position="relative" height={{ xs: 300, md: 390 }}>
-            <Image src="/images/imagen-porque-elegir-emprebit.png" alt="DMG DEVS" fill />
+            <Image src="/images/imagen-porque-elegir.png" alt="DMG DEVS" fill className='image' />
           </Grid>
           <Grid item xs={12} md={6}>
             <Typography variant="subtitle2" mb={2} mt={{ xs: 3, md: 0 }}> ¿Por qué elegir Damage Devs? </Typography>
@@ -47,7 +47,7 @@ const HomePage: NextPage = () => {
         <CharacteristicsWebs />
 
         <StatsGroup />
-        
+
       </Layout >
     </>
   )

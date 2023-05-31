@@ -10,7 +10,7 @@ const ServicesPage: NextPage = () => {
     return (
         <Layout title="Damage Devs - Servicios">
 
-            <Grid container justifyContent="center" alignItems="center" direction="column" mt={5} mb={5}>
+            <Grid container justifyContent="center" alignItems="center" direction="column" mt={5} mb={5} textAlign="center">
                 <Typography variant='h5' > Acá puede ver </Typography>
                 <Typography variant="subtitle1"> Nuestros Servicios </Typography>
                 <span className='mini-divider'></span>
@@ -18,11 +18,11 @@ const ServicesPage: NextPage = () => {
 
             <ServicesTabs />
 
-            <Grid container justifyContent="center" alignItems="center" direction="column" mt={5} mb={5}>
+            <Grid container justifyContent="center" alignItems="center" direction="column" mt={5} mb={5} textAlign="center">
                 <Typography variant='h5' > Te brindamos un servicio destacado </Typography>
                 <Typography variant="subtitle1"> Máxima atención al detalle </Typography>
                 <span className='mini-divider'></span>
-                <Typography textAlign="center">
+                <Typography>
                     Para lograr el famoso efecto «wow» de nuestros clientes en internet,
                     trabajamos el diseño web cuidando los detalles al máximo.  Seleccionamos cuidadosamente los elementos,
                     los colores, la distribución, la tipografía. Cada detalle cuenta.  La luz de las fotos, contrastes,

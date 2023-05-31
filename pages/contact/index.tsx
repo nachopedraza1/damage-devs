@@ -8,7 +8,7 @@ const ContactPage: NextPage = () => {
     return (
         <Layout title="Damage Devs - Contacto">
 
-            <Grid container justifyContent="center" alignItems="center" direction="column" mt={5} mb={5}>
+            <Grid container justifyContent="center" alignItems="center" direction="column" mt={5} mb={5} textAlign="center">
                 <Typography variant="subtitle1"> Contactese con nosotros</Typography>
                 <Typography variant='h6' textAlign="center"> Dedicados, perfeccionistas y con nuevas ideas para ayudarte a crecer en Internet. </Typography>
                 <span className='mini-divider'></span>

@@ -5,6 +5,7 @@ export default function Document() {
     <Html lang="en">
 
       <Head>
+        <link rel="icon" type="png" sizes="32x32" href="/images/favicon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
@@ -14,7 +15,7 @@ export default function Document() {
         <Main />
         <NextScript />
       </body>
-      
+
     </Html>
   )
 }

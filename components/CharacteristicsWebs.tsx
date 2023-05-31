@@ -22,7 +22,7 @@ export const CharacteristicsWebs: FC = () => {
                 </Grid>
             </Grid>
             <Grid item xs={12} md={5} textAlign="center" position="relative" height={{ xs: 300, sm: 420 }}>
-                <Image src="/images/imagen-caracteristicas-web-de-emprebit.png" alt="DMG DEVS" fill />
+                <Image src="/images/imagen-caracteristicas-web-de-emprebit.png" alt="DMG DEVS" fill className='image' />
             </Grid>
         </Grid>
     )

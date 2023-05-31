@@ -16,7 +16,7 @@ const PlansPage: NextPage = () => {
 
             <TableFunctions />
 
-            <Grid container justifyContent="center" alignItems="center" direction="column" pt={7} mb={7} id="custom">
+            <Grid container justifyContent="center" alignItems="center" direction="column" pt={7} mb={7} id="custom" textAlign="center">
                 <Typography variant="subtitle2"> ¿Estas buscando un sitio a medida?  </Typography>
                 <Typography variant='h6' > Envíenos un mensaje y cuentenos sobre su proyecto! </Typography>
                 <span className='mini-divider'></span>

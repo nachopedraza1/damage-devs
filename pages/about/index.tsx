@@ -10,15 +10,15 @@ const AboutPage: NextPage = () => {
     return (
         <Layout title="Damage Devs - Nosotros">
 
-            <Grid container justifyContent="center" alignItems="center" direction="column" mt={5} mb={5}>
+            <Grid container justifyContent="center" alignItems="center" direction="column" mt={5} mb={5} textAlign="center">
                 <Typography variant="subtitle1"> Emprendedores como vos </Typography>
                 <Typography variant='h6' textAlign="center"> Dedicados, perfeccionistas y con nuevas ideas para ayudarte a crecer en Internet. </Typography>
                 <span className='mini-divider'></span>
             </Grid>
 
             <Grid container>
-                <Grid item xs={12} md={6} textAlign="center">
-                    <Image src="/images/about-us.png" alt='Damage devs' width={450} height={450} className='image' />
+                <Grid item xs={12} md={6} textAlign="center" position="relative" height={{ xs: 300, sm: 400 }}>
+                    <Image src="/images/about-us.png" alt='Damage devs' fill className='image' />
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <Typography variant='subtitle1' mb={1}> ¿Quienes somos? </Typography>
@@ -33,10 +33,9 @@ const AboutPage: NextPage = () => {
                         digital y como abordarlo para sacarle provecho.
                     </Typography>
                 </Grid>
-
-                <StatsGroup />
             </Grid>
 
+            <StatsGroup />
         </Layout>
     )
 }

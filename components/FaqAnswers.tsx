@@ -18,7 +18,7 @@ export const FaqAnswers: FC = () => {
     return (
         <Box mb={5}>
             <Grid container justifyContent="center" alignItems="center" direction="column" mt={5} mb={2}>
-                <Typography variant="subtitle1"> Preguntas Frecuentes</Typography>
+                <Typography variant="subtitle1" textAlign="center"> Preguntas Frecuentes</Typography>
                 <span className='mini-divider'></span>
             </Grid>
 

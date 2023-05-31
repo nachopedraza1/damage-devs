@@ -39,7 +39,7 @@ export const PlansSection: FC = () => {
         <>
             <Grid container justifyContent="center" alignItems="center" direction="column" mt={5} mb={5}>
                 <Typography variant='h6'> Acá puede ver </Typography>
-                <Typography variant="subtitle1"> Nuestros Planes </Typography>
+                <Typography variant="subtitle1" textAlign="center"> Nuestros Planes </Typography>
                 <span className='mini-divider'></span>
             </Grid>
 
