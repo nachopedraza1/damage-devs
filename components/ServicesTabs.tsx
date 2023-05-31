@@ -106,11 +106,11 @@ export const ServicesTabs = () => {
                 </Tabs>
             </Box>
             <TabPanel value={value} index={0}>
-                <Grid container mt={4} className="fade">
-                    <Grid item xs={6} textAlign="center">
-                        <Image src="/images/service-design-web.png" alt="DMG DEVS" width={400} height={400} className="image" />
+                <Grid container alignItems="center" className="fade" mt={4} gap={3}>
+                    <Grid item xs={12} md={5.8} textAlign="center" position="relative" height={{ xs: 250, md: 370 }}>
+                        <Image src="/images/service-design-web.png" alt="DMG DEVS" fill />
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item xs={12} md={5.8} >
                         <Typography variant="subtitle1" mb={2}> Servicio de diseño y desarrollo web profesional. </Typography>
                         <Typography mb={2}> Nuestros diseños web están pensados en siempre a ayudar a nuestros clientes a vender su producto o servicio, ofreciendo una imagen profesional de su negocio con un sitio web de alto impacto. </Typography>
                         <ListItemMapped arrayLinks={servicesDesignWeb} disableLink />
@@ -118,23 +118,23 @@ export const ServicesTabs = () => {
                 </Grid>
             </TabPanel>
             <TabPanel value={value} index={1}>
-                <Grid container mt={4} className="fade">
-                    <Grid item xs={6}>
+                <Grid container className="fade" mt={4} gap={3}>
+                    <Grid item xs={12} md={5.8}>
                         <Typography variant="subtitle1" mb={2}> Diseño y desarrollo de sítios web eCommerce o tienda online. </Typography>
                         <Typography mb={2}> Somos una Agencia con más de 3 años de experiencia en el desarrollo y mantenimiento de sitios web eCommerce.</Typography>
                         <ListItemMapped arrayLinks={servicesEcommerce} disableLink />
                     </Grid>
-                    <Grid item xs={6} textAlign="center">
-                        <Image src="/images/service-ecommerce.png" alt="DMG DEVS" width={400} height={400} className="image" />
+                    <Grid item xs={12} md={5.8} textAlign="center" position="relative" height={{ xs: 250, md: 370 }}>
+                        <Image src="/images/service-ecommerce.png" alt="DMG DEVS" fill />
                     </Grid>
                 </Grid>
             </TabPanel>
             <TabPanel value={value} index={2}>
-                <Grid container mt={4} className="fade">
-                    <Grid item xs={6} textAlign="center">
-                        <Image src="/images/service-mante2.png" alt="DMG DEVS" width={400} height={400} className="image" />
+                <Grid container className="fade" mt={4} gap={3}>
+                    <Grid item xs={12} md={5.8} textAlign="center" position="relative" height={{ xs: 250, md: 370 }}>
+                        <Image src="/images/service-mante2.png" alt="DMG DEVS" fill />
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item xs={12} md={5.8}>
                         <Typography variant="subtitle1" mb={2}> Servicio de manteniento para todo tipo de páginas web. </Typography>
                         <Typography mb={2}>Ya no tendrá que preocuparte de problemas inesperados que pueden mantener horas e incluso días tu sitio web offline, en muchos casos localizamos los errores y los corregimos antes incluso de que sean un verdadero problema. </Typography>
                         <ListItemMapped arrayLinks={servicesMante} disableLink />
@@ -142,23 +142,23 @@ export const ServicesTabs = () => {
                 </Grid>
             </TabPanel>
             <TabPanel value={value} index={3}>
-                <Grid container mt={4} className="fade">
-                    <Grid item xs={6}>
+                <Grid container className="fade" mt={4} gap={3}>
+                    <Grid item xs={12} md={5.8}>
                         <Typography variant="subtitle1" mb={2}> Servicio de diseño gráfico. </Typography>
                         <Typography mb={2}> La imagen visual es a menudo la primera impresión que la gente tiene de tus productos o servicios, también es la forma de transmitir de cómo queres que te vean. Una marca eficaz debe comunicar su propósito y personalidad, al tiempo que mejora la presencia de su empresa, donde quiera que aparezca.</Typography>
                         <ListItemMapped arrayLinks={servicesDesigns} disableLink />
                     </Grid>
-                    <Grid item xs={6} textAlign="center">
-                        <Image src="/images/service-design-web.png" alt="DMG DEVS" width={400} height={400} className="image" />
+                    <Grid item xs={12} md={5.8} textAlign="center" position="relative" height={{ xs: 250, md: 370 }}>
+                        <Image src="/images/service-design-web.png" alt="DMG DEVS" fill />
                     </Grid>
                 </Grid>
             </TabPanel>
             <TabPanel value={value} index={4}>
-                <Grid container mt={4} className="fade">
-                    <Grid item xs={6} textAlign="center">
-                        <Image src="/images/service-seo.png" alt="DMG DEVS" width={400} height={400} className="image" />
+                <Grid container className="fade" mt={4} gap={3}>
+                    <Grid item xs={12} md={5.8} textAlign="center" position="relative" height={{ xs: 250, md: 370 }}>
+                        <Image src="/images/service-seo.png" alt="DMG DEVS" fill />
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item xs={12} md={5.8}>
                         <Typography variant="subtitle1" mb={2}> Servicio de publicidad en Google ads. </Typography>
                         <Typography mb={2}>Llega a nuevos potenciales clientes, con una inversión mínima y resultados a corto plazo.
                             Los usuarios compran y buscan información de todo tipo en Google. Con tus anuncios se lo pondrás más fácil y tendrán más posibilidades de conectar contigo. Serás visible para todas aquellas personas que realicen búsquedas con palabras relacionadas de tu sector, negocio,producto o servicio. </Typography>
@@ -167,14 +167,14 @@ export const ServicesTabs = () => {
                 </Grid>
             </TabPanel>
             <TabPanel value={value} index={5}>
-                <Grid container mt={4} className="fade">
-                    <Grid item xs={6}>
+                <Grid container className="fade" mt={4} gap={3}>
+                    <Grid item xs={12} md={5.8}>
                         <Typography variant="subtitle1" mb={2}> Servicio de alojamiento web hosting. </Typography>
                         <Typography mb={2}> Contaras con un panel de adminisración muy intuitivo y facil de usar, ademas contaras con vídeos tutoriales que te enseñaran como administrar todo. Todos nuestros servidores cuentan con almacenamiento en Discos RAID 10 y Memorias de úlima generación, garantizandote un redimiento de calidad.</Typography>
                         <ListItemMapped arrayLinks={servicesHosting} disableLink />
                     </Grid>
-                    <Grid item xs={6} textAlign="center">
-                        <Image src="/images/service-hosting.png" alt="DMG DEVS" width={400} height={400} className="image" />
+                    <Grid item xs={12} md={5.8} textAlign="center" position="relative" height={{ xs: 250, md: 370 }}>
+                        <Image src="/images/service-hosting.png" alt="DMG DEVS" fill />
                     </Grid>
                 </Grid>
             </TabPanel>

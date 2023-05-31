@@ -37,26 +37,26 @@ export const Footer: FC = () => {
             <Container maxWidth="lg">
                 <Grid container justifyContent="space-between" alignItems="start" spacing={5} >
 
-                    <Grid item xs={3}>
+                    <Grid item xs={12} sm={6} md={3}>
                         <Image src={`/images/logodmg3.png`} alt='Damage devs' width={100} height={33} />
                         <span className="mini-divider" />
                         <Typography> Ponemos el foco en vos y en tu proyecto. Por eso trabajamos de forma conjunta para que tu negocio sea un éxito. </Typography>
                         <SocialButtons />
                     </Grid>
 
-                    <Grid item xs={3}>
+                    <Grid item xs={12} sm={6} md={3}>
                         <Typography variant="h6"> Servicios </Typography>
                         <span className="mini-divider" />
                         <ListItemMapped arrayLinks={services} />
                     </Grid>
 
-                    <Grid item xs={3}>
+                    <Grid item xs={12} sm={6} md={3}>
                         <Typography variant="h6"> Planes </Typography>
                         <span className="mini-divider" />
                         <ListItemMapped arrayLinks={plans} />
                     </Grid>
 
-                    <Grid item xs={3}>
+                    <Grid item xs={12} sm={6} md={3}>
                         <Typography variant="h6"> Contacto </Typography>
                         <span className="mini-divider" />
                         <ListItemMapped arrayLinks={contact} />

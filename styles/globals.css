@@ -290,6 +290,7 @@ nav .active {
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.4s;
     cursor: default;
+    max-width: 480px;
 }
 
 .services-box h5 {
@@ -357,6 +358,7 @@ nav .active {
     background: #1d1b1b;
     padding: 10px 20px;
     border-radius: 10px;
+    max-width: 480px;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -453,6 +455,7 @@ nav .active {
     transition: all 0.4s;
     cursor: default;
     z-index: 1;
+    max-width: 480px;
 }
 
 .plans-box:hover {
@@ -469,7 +472,6 @@ nav .active {
     content: '';
     position: absolute;
     background: #0f0f0fc6;
-    ;
     border-radius: 10px 10px 0px 0px;
     width: 100%;
     height: 80px;
@@ -537,6 +539,7 @@ nav .active {
     background-size: 35%;
     background-repeat: no-repeat;
     background-position: center;
+    overflow: hidden;
     padding-top: 30px;
 }
 

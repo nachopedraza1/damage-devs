@@ -26,26 +26,26 @@ const BasicPlanPage: NextPage = () => {
                     </Box>
                 </Grid>
 
-                <Grid container justifyContent="space-between">
+                <Grid container justifyContent={{ xs: "center", sm: "space-between" }} gap={2}>
                     <Grid item xs={12} textAlign="center">
                         <Typography variant="subtitle1" mb={4}> ¿Cómo se compone el Plan Web Básico? </Typography>
                     </Grid>
-                    <Grid item xs={2.9} className="services-box">
+                    <Grid item xs={12} sm={5.8} md={2.8} className="services-box">
                         <Home />
                         <Typography variant="h5" textAlign="center" > Portada</Typography>
                         <Typography> Sección principal del sitio web, destinada como forma de presentación del negocio. </Typography>
                     </Grid>
-                    <Grid item xs={2.9} className="services-box">
+                    <Grid item xs={12} sm={5.8} md={2.8} className="services-box">
                         <Category />
                         <Typography variant="h5" textAlign="center" > Servicios </Typography>
                         <Typography> Sección destinada a indicar qué servicios se ofrecen, con detalle de los mismos. </Typography>
                     </Grid>
-                    <Grid item xs={2.9} className="services-box">
+                    <Grid item xs={12} sm={5.8} md={2.8} className="services-box">
                         <People />
                         <Typography variant="h5" textAlign="center" > Quienes Somos </Typography>
                         <Typography> Sección para mostrar información sobre vos o empresa. </Typography>
                     </Grid>
-                    <Grid item xs={2.9} className="services-box">
+                    <Grid item xs={12} sm={5.8} md={2.8} className="services-box">
                         <PhoneForwarded />
                         <Typography variant="h5" textAlign="center" > Contacto </Typography>
                         <Typography> Sección para que los clientes conozcan todos los medios de contacto disponibles. </Typography>

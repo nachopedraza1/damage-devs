@@ -20,7 +20,7 @@ export const Services: FC = () => {
                 <span className='mini-divider'></span>
             </Grid>
 
-            <Grid container justifyContent="space-between" gap={4}>
+            <Grid container justifyContent={{ xs: "center", md: "space-between" }} gap={4}>
                 {services.map(({ title, text, icon, path }) => (
                     <Grid item xs={12} sm={5.6} md={3.7} className="services-box" key={title}>
                         {icon}

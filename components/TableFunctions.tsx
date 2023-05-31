@@ -46,7 +46,7 @@ export const TableFunctions = () => {
         <Grid container>
 
             <Grid container justifyContent="center" alignItems="center" direction="column" mt={5} mb={5}>
-                <Typography variant="subtitle1"> Explore todas las funcionalidades </Typography>
+                <Typography variant="subtitle1" textAlign="center"> Explore todas las funcionalidades </Typography>
                 <span className='mini-divider'></span>
             </Grid>
 

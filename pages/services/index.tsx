@@ -31,7 +31,7 @@ const ServicesPage: NextPage = () => {
             </Grid>
 
             <Grid container justifyContent="space-between" mb={4}>
-                <Grid item xs={6} className='services-box-mini'>
+                <Grid item xs={12} md={6} className='services-box-mini'>
                     <Settings />
                     <Typography variant="h5" fontWeight={600} mb={1}> Sitios web autoadministrables </Typography>
                     <Typography>
@@ -41,7 +41,7 @@ const ServicesPage: NextPage = () => {
                         y absolutamente adaptada a las necesidades de su empresa
                     </Typography>
                 </Grid>
-                <Grid item xs={6} className='services-box-mini'>
+                <Grid item xs={12} md={6} className='services-box-mini'>
                     <DataObject />
                     <Typography variant="h5" fontWeight={600} mb={1}> Desarrollos con tecnología ampliable </Typography>
                     <Typography>
@@ -50,7 +50,7 @@ const ServicesPage: NextPage = () => {
                         adaptarse a las necesidades y requerimientos de su empresa.
                     </Typography>
                 </Grid>
-                <Grid item xs={6} className='services-box-mini'>
+                <Grid item xs={12} md={6} className='services-box-mini'>
                     <Code />
                     <Typography variant="h5" fontWeight={600} mb={1}> Última tecnología del mercado </Typography>
                     <Typography>
@@ -59,7 +59,7 @@ const ServicesPage: NextPage = () => {
                         y tecnología de punta.
                     </Typography>
                 </Grid>
-                <Grid item xs={6} className='services-box-mini'>
+                <Grid item xs={12} md={6} className='services-box-mini'>
                     <CloudDone />
                     <Typography variant="h5" fontWeight={600} mb={1}> Facilidad de uso y navegación </Typography>
                     <Typography>

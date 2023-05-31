@@ -47,7 +47,7 @@ export const ConfirmOrder: FC<FormData> = ({ email, name, phoneNumber }) => {
                 </Typography>
 
             </Grid>
-            <Grid item xs={4} textAlign="end">
+            <Grid item xs={4} textAlign="end" display={{ xs: "none", sm: "block" }}>
                 <Image src="/images/orderconfirmation.png" alt="Damage devs nueva orden" width={200} height={230} />
             </Grid>
             <Grid item xs={12}>

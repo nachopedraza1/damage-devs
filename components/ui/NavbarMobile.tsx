@@ -13,14 +13,6 @@ interface Props {
     window?: () => Window;
 }
 
-const navLinks = [
-    { id: 1, text: "Inicio", path: "/" },
-    { id: 2, text: "Planes", path: "/plans" },
-    { id: 3, text: "Servicios", path: "/services" },
-    { id: 4, text: "Nosotros", path: "/about" },
-    { id: 5, text: "Contacto", path: "/contact" },
-];
-
 export const NavbarMobile: FC = (props: Props) => {
 
     const { navbarStyle, trigger } = useNavbar(props);

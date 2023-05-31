@@ -1,11 +1,12 @@
+import { FC } from "react"
 import Link from "next/link"
 
 import { Grid, Tooltip } from "@mui/material"
 import { Facebook, Instagram, WhatsApp } from "@mui/icons-material"
 
-export const SocialButtons = () => {
+export const SocialButtons: FC<{ justifyContent?: string }> = ({ justifyContent = "start" }) => {
     return (
-        <Grid container margin="10px 0px" gap={2}>
+        <Grid container justifyContent={justifyContent} margin="10px 0px" gap={2}>
             <Grid item>
                 <Tooltip title="Facebook" arrow>
                     <Link href="/" target="_blank">

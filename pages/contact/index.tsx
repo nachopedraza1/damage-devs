@@ -10,7 +10,7 @@ const ContactPage: NextPage = () => {
 
             <Grid container justifyContent="center" alignItems="center" direction="column" mt={5} mb={5}>
                 <Typography variant="subtitle1"> Contactese con nosotros</Typography>
-                <Typography variant='h6'> Dedicados, perfeccionistas y con nuevas ideas para ayudarte a crecer en Internet. </Typography>
+                <Typography variant='h6' textAlign="center"> Dedicados, perfeccionistas y con nuevas ideas para ayudarte a crecer en Internet. </Typography>
                 <span className='mini-divider'></span>
             </Grid>
 
@@ -19,7 +19,7 @@ const ContactPage: NextPage = () => {
 
                 <Typography variant='h6'> Si tiene alguna pregunta o desea que le coticemos un presupuesto, por favor use los siguientes medios para contactarse con nosotros. </Typography>
 
-                <Grid item xs={3.1} className="services-box" >
+                <Grid item xs={12} md={3.1} className="services-box" >
                     <LocationOn />
                     <Typography variant="h5"> ¿Donde estamos? </Typography>
                     <Typography mb={3}>
@@ -30,7 +30,7 @@ const ContactPage: NextPage = () => {
                     </Link>
                 </Grid>
 
-                <Grid item xs={3.1} className="services-box" >
+                <Grid item xs={12} md={3.1} className="services-box" >
                     <WhatsApp />
                     <Typography variant="h5"> WhatsApp </Typography>
                     <Typography mb={3}>
@@ -42,7 +42,7 @@ const ContactPage: NextPage = () => {
                     </Link>
                 </Grid>
 
-                <Grid item xs={3.1} className="services-box" >
+                <Grid item xs={12} md={3.1} className="services-box" >
                     <Email />
                     <Typography variant="h5"> Email </Typography>
                     <Typography mb={3}>
