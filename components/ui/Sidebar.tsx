@@ -42,8 +42,8 @@ export const Sidebar: FC = () => {
 
             <Grid container alignItems="center" direction="column" padding={2}>
                 {navLinks.map(({ id, path, icon, text }) => (
-                    <MuiLink component={Link} href={path} onClick={handleCloseSideBar}>
-                        <Grid item key={id} display="flex" alignItems="center" padding={1} gap={1} width="130px">
+                    <MuiLink component={Link} href={path} onClick={handleCloseSideBar} key={id}>
+                        <Grid item display="flex" alignItems="center" padding={1} gap={1} width="130px">
                             {icon}
                             <Typography fontWeight={600} > {text} </Typography>
                         </Grid>
