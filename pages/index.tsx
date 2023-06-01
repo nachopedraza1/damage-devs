@@ -1,5 +1,4 @@
 import { NextPage } from "next"
-import Image from "next/image";
 
 import { Layout } from "@/components/layouts";
 import { CustomButton, MouseScroll } from "@/components/ui";
@@ -22,7 +21,7 @@ const HomePage: NextPage = () => {
             <MouseScroll />
           </Grid>
           <Grid item xs={12} md={6.5} position="relative" height={{ xs: 300, sm: 500 }}>
-            <LoaderImage />
+            <LoaderImage url="/images/image-home-web-design.png" />
           </Grid>
         </Grid>
 
@@ -37,7 +36,7 @@ const HomePage: NextPage = () => {
             </Typography>
           </Grid>
           <Grid item xs={12} md={5} textAlign="center" position="relative" height={{ xs: 300, md: 390 }}>
-            <Image src="/images/imagen-porque-elegir.png" alt="DMG DEVS" fill className='image' />
+          <LoaderImage url="/images/imagen-porque-elegir.png" />
           </Grid>
           <Grid item xs={12} md={6}>
             <Typography variant="subtitle2" mb={2} mt={{ xs: 3, md: 0 }}> ¿Por qué elegir Damage Devs? </Typography>

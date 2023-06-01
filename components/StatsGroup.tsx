@@ -6,7 +6,7 @@ import { EmojiEvents, HeadsetMic, Person, PersonalVideo } from "@mui/icons-mater
 
 
 const stats = [
-    { title: "Clietes satisfechos", value: 80, icon: <Person /> },
+    { title: "Clientes satisfechos", value: 80, icon: <Person /> },
     { title: "Páginas web realizadas", value: 100, icon: <PersonalVideo /> },
     { title: "Consultas de soporte", value: 250, icon: <HeadsetMic /> },
     { title: "Casos de éxito", value: 70, icon: <EmojiEvents /> }

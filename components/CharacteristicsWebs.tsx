@@ -1,8 +1,8 @@
 import { FC } from "react";
-import Image from "next/image";
 
 import { ListItemMapped } from "./ListItemMapped";
 import { Grid, Typography } from "@mui/material";
+import { LoaderImage } from "./ui";
 
 const characterist = [
     { title: "Diseño web responsive" },
@@ -22,7 +22,7 @@ export const CharacteristicsWebs: FC = () => {
                 </Grid>
             </Grid>
             <Grid item xs={12} md={5} textAlign="center" position="relative" height={{ xs: 300, sm: 420 }}>
-                <Image src="/images/imagen-caracteristicas-web.png" alt="DMG DEVS" fill className='image' />
+                <LoaderImage url="/images/imagen-caracteristicas-web.png" />
             </Grid>
         </Grid>
     )

@@ -46,10 +46,10 @@ const ContactPage: NextPage = () => {
                     <Email />
                     <Typography variant="h5"> Email </Typography>
                     <Typography mb={3}>
-                        nachi_choco@live.com.ar <br />
-                        damagedevs@gmail.com
+                        Correo electrónico.<br />
+                        damagedevs@hotmail.com
                     </Typography>
-                    <Link target='_blank' href="mailto:nachi_choco@live.com.ar">
+                    <Link target='_blank' href="mailto:damagedevs@hotmail.com">
                         <Button variant="contained" sx={{ textAlign: "end" }}> Enviar Mensaje </Button>
                     </Link>
                 </Grid>

@@ -5,6 +5,7 @@ import { ListItemMapped } from "./ListItemMapped";
 
 import { Box, Typography, Tabs, Tab, Grid } from "@mui/material";
 import { ImportantDevices, ShoppingBasket, SettingsSuggest, Brush, Moving, Storage } from "@mui/icons-material";
+import { LoaderImage } from "./ui";
 
 
 interface TabPanelProps {
@@ -108,7 +109,7 @@ export const ServicesTabs = () => {
             <TabPanel value={value} index={0}>
                 <Grid container alignItems="center" className="fade" mt={4} gap={3}>
                     <Grid item xs={12} md={5.8} textAlign="center" position="relative" height={{ xs: 250, md: 370 }}>
-                        <Image src="/images/service-design-web.png" alt="DMG DEVS" fill className='image' />
+                        <LoaderImage url="/images/service-design-web.png" />
                     </Grid>
                     <Grid item xs={12} md={5.8} >
                         <Typography variant="subtitle1" mb={2}> Servicio de diseño y desarrollo web profesional. </Typography>
@@ -125,14 +126,14 @@ export const ServicesTabs = () => {
                         <ListItemMapped arrayLinks={servicesEcommerce} disableLink />
                     </Grid>
                     <Grid item xs={12} md={5.8} textAlign="center" position="relative" height={{ xs: 250, md: 370 }}>
-                        <Image src="/images/service-ecommerce.png" alt="DMG DEVS" fill className='image' />
+                        <LoaderImage url="/images/service-ecommerce.png" />
                     </Grid>
                 </Grid>
             </TabPanel>
             <TabPanel value={value} index={2}>
                 <Grid container className="fade" mt={4} gap={3}>
                     <Grid item xs={12} md={5.8} textAlign="center" position="relative" height={{ xs: 250, md: 370 }}>
-                        <Image src="/images/service-mante.png" alt="DMG DEVS" fill className='image' />
+                        <LoaderImage url="/images/service-mante.png" />
                     </Grid>
                     <Grid item xs={12} md={5.8}>
                         <Typography variant="subtitle1" mb={2}> Servicio de manteniento para todo tipo de páginas web. </Typography>
@@ -149,14 +150,14 @@ export const ServicesTabs = () => {
                         <ListItemMapped arrayLinks={servicesDesigns} disableLink />
                     </Grid>
                     <Grid item xs={12} md={5.8} textAlign="center" position="relative" height={{ xs: 250, md: 370 }}>
-                        <Image src="/images/service-design-web.png" alt="DMG DEVS" fill className='image' />
+                        <LoaderImage url="/images/service-design-web.png" />
                     </Grid>
                 </Grid>
             </TabPanel>
             <TabPanel value={value} index={4}>
                 <Grid container className="fade" mt={4} gap={3}>
                     <Grid item xs={12} md={5.8} textAlign="center" position="relative" height={{ xs: 250, md: 370 }}>
-                        <Image src="/images/service-seo.png" alt="DMG DEVS" fill className='image' />
+                        <LoaderImage url="/images/service-seo.png" />
                     </Grid>
                     <Grid item xs={12} md={5.8}>
                         <Typography variant="subtitle1" mb={2}> Servicio de publicidad en Google ads. </Typography>
@@ -174,7 +175,7 @@ export const ServicesTabs = () => {
                         <ListItemMapped arrayLinks={servicesHosting} disableLink />
                     </Grid>
                     <Grid item xs={12} md={5.8} textAlign="center" position="relative" height={{ xs: 250, md: 370 }}>
-                        <Image src="/images/service-hosting.png" alt="DMG DEVS" fill className='image' />
+                        <LoaderImage url="/images/service-hosting.png" />
                     </Grid>
                 </Grid>
             </TabPanel>

@@ -28,7 +28,7 @@ const contact = [
     { title: "San Vicente, Córdoba.", icon: <LocationOn />, path: "https://www.google.com/maps/search/San+Vicente,+C%C3%B3rdoba+2812/@-31.4236324,-64.1502446,17z/data=!3m1!4b1?hl=es&entry=ttu", target: "_blanc" },
     { title: "+54-351-3295515", icon: <LocalPhone />, path: "https://wa.me/3513295515", target: "_blanc" },
     { title: "www.damagedevs.com", icon: <Language />, path: "/" },
-    { title: "nachi_choco@live.com.ar", icon: <Email />, path: "mailto:nachi_choco@live.com.ar", target: "_blanc" },
+    { title: "damagedevs@hotmail.com", icon: <Email />, path: "mailto:damagedevs@hotmail.com", target: "_blanc" },
 ]
 
 export const Footer: FC = () => {

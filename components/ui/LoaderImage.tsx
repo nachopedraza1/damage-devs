@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import { CircularProgress } from "@mui/material";
 
-export const LoaderImage: FC = () => {
+export const LoaderImage: FC<{ url: string }> = ({ url }) => {
 
     const [loading, setLoading] = useState<boolean>(true);
 
@@ -11,13 +11,9 @@ export const LoaderImage: FC = () => {
         setLoading(false)
     }
 
-    useEffect(() => {
-        console.log(loading);
-    }, [loading])
-
     return (
         <>
-            <Image src="/images/image-home-web-design.png" alt="DMG DEVS" fill onLoad={isLoaded} />
+            <Image src={url} alt="DMG DEVS" fill onLoad={isLoaded} loading="lazy" className="image" />
             {loading &&
                 <CircularProgress sx={{
                     position: "absolute",
