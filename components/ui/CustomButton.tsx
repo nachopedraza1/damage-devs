@@ -1,7 +1,8 @@
 
 import { FC } from 'react';
-import { Link as MuiLink, Typography } from '@mui/material';
 import Link from 'next/link';
+
+import { Link as MuiLink, Typography } from '@mui/material';
 
 interface Props {
     text: string;

@@ -1,11 +1,11 @@
 import { FC, FormEvent } from "react";
-
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
 
 import { Check } from "@mui/icons-material";
 import { Button, Grid, Typography, Link as MuiLink } from '@mui/material';
+
 import { FormData } from "@/interfaces"
 
 export const ConfirmOrder: FC<FormData> = ({ email, name, phoneNumber }) => {

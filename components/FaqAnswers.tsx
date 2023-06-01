@@ -3,8 +3,8 @@ import Link from "next/link";
 
 import { ListItemMapped } from "./ListItemMapped";
 
-import { Accordion, AccordionSummary, Typography, AccordionDetails, Grid, Link as MuiLink, Box } from "@mui/material";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { Accordion, AccordionSummary, Typography, AccordionDetails, Grid, Link as MuiLink, Box } from "@mui/material";
 
 export const FaqAnswers: FC = () => {
     const [expanded, setExpanded] = useState<string | false>('panel1');

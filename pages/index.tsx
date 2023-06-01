@@ -5,7 +5,8 @@ import { Layout } from "@/components/layouts";
 import { CustomButton, MouseScroll } from "@/components/ui";
 import { AcordionHome, CharacteristicsWebs, Services, StatsGroup } from "@/components";
 
-import { Grid, Typography } from '@mui/material';
+import { CircularProgress, Grid, Typography } from '@mui/material';
+import { LoaderImage } from "@/components/ui/LoaderImage";
 
 const HomePage: NextPage = () => {
 
@@ -21,7 +22,7 @@ const HomePage: NextPage = () => {
             <MouseScroll />
           </Grid>
           <Grid item xs={12} md={6.5} position="relative" height={{ xs: 300, sm: 500 }}>
-            <Image src="/images/image-home-web-design.png" alt="DMG DEVS" fill />
+            <LoaderImage />
           </Grid>
         </Grid>
 

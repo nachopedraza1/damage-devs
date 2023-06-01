@@ -2,11 +2,12 @@ import { FC, useContext } from "react"
 import Image from "next/image";
 
 import { useNavbar } from "@/hooks";
-
-import { AppBar, Container, Grid, IconButton, Slide, Toolbar } from "@mui/material";
-import { MenuOutlined } from "@mui/icons-material";
-import { Sidebar } from "./Sidebar";
 import { UiContext } from "@/context/UiContext";
+
+import { Sidebar } from "./Sidebar";
+import { MenuOutlined } from "@mui/icons-material";
+import { AppBar, Container, Grid, IconButton, Slide, Toolbar } from "@mui/material";
+
 
 
 interface Props {

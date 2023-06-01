@@ -6,8 +6,8 @@ import { ArrowBack } from "@mui/icons-material";
 
 import { OrderForm, ConfirmOrder } from "@/components";
 
-import { FormData } from "@/interfaces";
 import { useStepper } from "@/hooks";
+import { FormData } from "@/interfaces";
 
 const style = {
     position: 'absolute' as 'absolute',

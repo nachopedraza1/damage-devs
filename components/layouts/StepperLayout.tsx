@@ -1,8 +1,9 @@
+import { FC, ReactNode, useContext } from "react";
+
 import { ArrowBack } from "@mui/icons-material";
 import { Modal, Fade, Box, Stepper, Step, StepLabel, Divider, IconButton } from "@mui/material";
-import { FC, ReactNode, useContext, useState } from "react"
-import { ConfirmOrder } from "../ConfirmOrder";
-import { OrderForm } from "../OrderForm";
+
+import { useStepper } from "@/hooks";
 import { UiContext } from "@/context/UiContext";
 
 const style = {
@@ -24,9 +25,7 @@ export const StepperLayout: FC<{ children: ReactNode }> = ({ children }) => {
 
     const { openModal, handleCloseModal } = useContext(UiContext);
 
-    const [step, setStep] = useState(1)
-    const nextStep = () => setStep(step + 1);
-    const backStep = () => setStep(step - 1);
+    const { step, backStep } = useStepper();
 
     return (
         <Modal

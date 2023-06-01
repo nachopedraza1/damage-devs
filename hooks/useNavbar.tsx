@@ -1,7 +1,7 @@
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import { captureScroll } from "@/helpers";
 import { useScrollTrigger } from "@mui/material";
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
 
 interface Props {
     window?: () => Window;
