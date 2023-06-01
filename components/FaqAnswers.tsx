@@ -85,7 +85,7 @@ export const FaqAnswers: FC = () => {
                     <Typography>
                         Ciertamente, cada proyecto en diseño web es diferente.  Por ello, la cantidad de tiempo de desarrollo asociado varía
                         de proyecto a proyecto y por ende su costo.  Sin embargo, para simplificar el proceso de presupuestación, podés ponerte
-                        en  <MuiLink component={Link} href="/plans" color="primary.main" sx={{ textDecoration: "underline" }}> contacto con nosotros </MuiLink>
+                        en  <MuiLink component={Link} href="/contact" color="primary.main" sx={{ textDecoration: "underline" }}> contacto con nosotros </MuiLink>
                         te haremos algunas preguntas simples que son claves para entender tus requerimientos y te presentaremos
                         la propuesta más conveniente.
                     </Typography>
