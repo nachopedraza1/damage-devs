@@ -550,6 +550,14 @@ nav .active {
     height: 2px;
 }
 
+.mini-divider_2 {
+    background-color: #08b8ef;
+    margin: 15px auto;
+    display: block;
+    width: 60px;
+    height: 2px;
+}
+
 .image:hover {
     transform: translateY(-10px);
 }

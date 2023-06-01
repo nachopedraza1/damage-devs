@@ -3,6 +3,7 @@ export * from './OrderForm';
 export * from './StatsGroup';
 export * from './FaqAnswers';
 export * from './ModalOrder';
+export * from './ModalWorks';
 export * from './AcordionHome';
 export * from './PlansSection';
 export * from './ServicesTabs';

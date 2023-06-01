@@ -1,13 +1,17 @@
-import { NextPage } from "next"
+import { useContext } from "react";
+import { NextPage } from "next";
 
 import { Layout } from "@/components/layouts";
-import { CustomButton, MouseScroll } from "@/components/ui";
-import { AcordionHome, CharacteristicsWebs, Services, StatsGroup } from "@/components";
+import { CustomButton, LoaderImage, MouseScroll } from "@/components/ui";
+import { AcordionHome, CharacteristicsWebs, Services, StatsGroup, ModalWorks } from "@/components";
 
-import { CircularProgress, Grid, Typography } from '@mui/material';
-import { LoaderImage } from "@/components/ui/LoaderImage";
+import { Box, Grid, Typography } from '@mui/material';
+
+import { UiContext } from "@/context/UiContext";
 
 const HomePage: NextPage = () => {
+
+  const { handleOpenModal, openModal } = useContext(UiContext);
 
   return (
     <>
@@ -17,8 +21,9 @@ const HomePage: NextPage = () => {
           <Grid item xs={12} md={5} position="relative">
             <Typography variant="subtitle1" mb={2}>Diseñamos páginas web éxitosas, con estándares de última generación</Typography>
             <Typography variant="h6" mb={2}>Somos la mejor agencia en brindar atención personalizada y entregar el mejor soporte a nuestros clientes.</Typography>
-            <CustomButton text="ver trabajos" link="/portfolio" />
-            <MouseScroll />
+            <Box sx={{ cursor: "pointer" }} onClick={handleOpenModal}>
+              <CustomButton text="Ultimos trabajos" />
+            </Box>
           </Grid>
           <Grid item xs={12} md={6.5} position="relative" height={{ xs: 300, sm: 500 }}>
             <LoaderImage url="/images/image-home-web-design.png" />
@@ -36,7 +41,7 @@ const HomePage: NextPage = () => {
             </Typography>
           </Grid>
           <Grid item xs={12} md={5} textAlign="center" position="relative" height={{ xs: 300, md: 390 }}>
-          <LoaderImage url="/images/imagen-porque-elegir.png" />
+            <LoaderImage url="/images/imagen-porque-elegir.png" />
           </Grid>
           <Grid item xs={12} md={6}>
             <Typography variant="subtitle2" mb={2} mt={{ xs: 3, md: 0 }}> ¿Por qué elegir Damage Devs? </Typography>
@@ -45,8 +50,8 @@ const HomePage: NextPage = () => {
         </Grid>
 
         <CharacteristicsWebs />
-
         <StatsGroup />
+        <ModalWorks />
 
       </Layout >
     </>

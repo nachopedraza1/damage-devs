@@ -1,5 +1,6 @@
 import { FC } from "react";
-import Image from "next/image"
+import Link from "next/link";
+import Image from "next/image";
 
 import { ListItemMapped } from "../ListItemMapped";
 import { SocialButtons } from "./SocialButtons";
@@ -38,7 +39,9 @@ export const Footer: FC = () => {
                 <Grid container justifyContent="space-between" alignItems="start" spacing={5} >
 
                     <Grid item xs={12} sm={6} md={3}>
-                        <Image src={`/images/logodmg3.png`} alt='Damage devs' width={100} height={33} />
+                        <Link href="/">
+                            <Image src={`/images/logodmg3.png`} alt='Damage devs' width={100} height={33} />
+                        </Link>
                         <span className="mini-divider" />
                         <Typography> Ponemos el foco en vos y en tu proyecto. Por eso trabajamos de forma conjunta para que tu negocio sea un éxito. </Typography>
                         <SocialButtons />

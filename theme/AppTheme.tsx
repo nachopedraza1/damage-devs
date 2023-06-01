@@ -1,7 +1,7 @@
 import { ReactNode, FC } from 'react';
 import { ThemeProvider } from '@mui/material';
 
-import { lightTheme, darkTheme } from './';
+import { darkTheme } from './';
 import CssBaseline from '@mui/material/CssBaseline';
 
 interface Props {
